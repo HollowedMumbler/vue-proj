@@ -1,5 +1,6 @@
 <script setup>
 import PageHeader from '../../PageHeader.vue'
+import ProgramCampusLife from './ProgramCampusLife.vue'
 
 const objectives = [
   'Exhibit skills, knowledge and leadership to excel in their information technology careers and related discipline.',
@@ -77,7 +78,7 @@ function scrollToTop() {
     </section>
 
     <section id="objectives" class="it-section objectives-section">
-      <p class="section-kicker">Program Design</p>
+      <p class="section-kicker"><span class="section-index">01</span> Program Design</p>
       <h2>Program Educational Objectives</h2>
       <p class="section-subtext">These objectives describe the professional qualities and contributions the Information Technology program aims to develop.</p>
       <ol class="objectives-list">
@@ -93,7 +94,7 @@ function scrollToTop() {
     </section>
 
     <section id="program-outcomes" class="it-section program-outcomes-section">
-      <p class="section-kicker">Graduate Preparation</p>
+      <p class="section-kicker"><span class="section-index">02</span> Graduate Preparation</p>
       <h2>Program Outcomes</h2>
       <p class="section-subtext">These outcomes turn the program’s learning goals into practical knowledge, skills, and professional abilities.</p>
       <div class="outcome-copy">
@@ -111,7 +112,7 @@ function scrollToTop() {
     </section>
 
     <section id="curriculum-rationale" class="it-section rationale-section">
-      <p class="section-kicker">Curriculum Foundations</p>
+      <p class="section-kicker"><span class="section-index">03</span> Curriculum Foundations</p>
       <h2 class="ched-heading">Curriculum Rationale</h2>
       <p class="section-subtext rationale-subtext">Based on CHED Memo Order No. 25, s. 2015 · Effective Academic Year 2018–2019</p>
       <div class="rationale-copy">
@@ -120,30 +121,31 @@ function scrollToTop() {
     </section>
 
     <section id="curriculum-description" class="it-section curriculum-section">
-      <p class="section-kicker">What You Will Study</p>
+      <p class="section-kicker"><span class="section-index">04</span> What You Will Study</p>
       <h2>Curriculum Description:</h2>
       <p class="section-subtext">Explore the infrastructure, systems, and applied technologies that support organizations.</p>
-      <ul class="curriculum-list">
-        <li>The BSIT curriculum includes basic and advanced courses on planning, development, integration, and management of information technology infrastructure that provide computing solutions to address the needs of organizations.</li>
-        <li>The curriculum should include courses that cover Knowledge Areas as recommended in ACM Information Technology Curricula 2008.</li>
-        <li>Defines eleven (11) Knowledge Areas:
-          <ul class="knowledge-list">
-            <li v-for="area in knowledgeAreas" :key="area">{{ area }}</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="campus-life" class="it-society-section">
-      <div class="society-shapes" aria-hidden="true"></div>
-      <div class="society-inner">
-        <img class="it-society-logo society-section-logo" src="/images/academic-programs/information-technology/information-technology-society.png" alt="Information Technology student organization" />
-        <p>The embodiment of Information Technology Students is enriched through camaraderie as they strengthen their bonds with each year level. Through different outreach activities and as well as the college and university, the members of this organization gets to meet and gather ideas to come up and be able to fulfill the mission of this organization, thus, giving them ample knowledge that could help them build a better personality through working together.</p>
+      <div class="curriculum-panel">
+        <ul class="curriculum-list">
+          <li>The BSIT curriculum includes basic and advanced courses on planning, development, integration, and management of information technology infrastructure that provide computing solutions to address the needs of organizations.</li>
+          <li>The curriculum should include courses that cover Knowledge Areas as recommended in ACM Information Technology Curricula 2008.</li>
+          <li>Defines eleven (11) Knowledge Areas:
+            <ul class="knowledge-list">
+              <li v-for="area in knowledgeAreas" :key="area">{{ area }}</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </section>
 
+    <ProgramCampusLife
+      organization-name="Information Technology Society"
+      logo="/images/academic-programs/information-technology/information-technology-society.png"
+      logo-alt="Information Technology student organization"
+      :paragraphs="['The embodiment of Information Technology Students is enriched through camaraderie as they strengthen their bonds with each year level. Through different outreach activities and as well as the college and university, the members of this organization gets to meet and gather ideas to come up and be able to fulfill the mission of this organization, thus, giving them ample knowledge that could help them build a better personality through working together.']"
+    />
+
     <section id="graduate-outcomes" class="it-section graduate-section">
-      <p class="section-kicker">Degree Competencies</p>
+      <p class="section-kicker"><span class="section-index">06</span> Degree Competencies</p>
       <h2>Bachelor of Science in Information Technology (BSIT)</h2>
       <p class="section-subtext">The outcomes below describe the knowledge and capabilities expected of Information Technology graduates.</p>
       <table class="graduate-table">
@@ -192,6 +194,9 @@ function scrollToTop() {
 .it-section { width:min(1330px,calc(100% - 100px)); margin:0 auto; scroll-margin-top:110px; }
 .section-kicker { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 12px; color:#bd8318; font-size:13px; font-weight:700; letter-spacing:.14em; text-align:center; text-transform:uppercase; }
 .section-kicker::before,.section-kicker::after { width:28px; height:1px; background:#e5a32a; content:''; }
+.section-index { display:inline-grid; width:32px; height:25px; place-items:center; border:1px solid #e5a32a80; border-radius:14px; color:#8c681d; font-size:10px; letter-spacing:.04em; }
+.program-outcomes-section,.rationale-section,.curriculum-section,.graduate-section { position:relative; border-top:1px solid #e6ebe8; }
+.program-outcomes-section::before,.rationale-section::before,.curriculum-section::before,.graduate-section::before { position:absolute; top:-1px; left:50%; width:54px; height:2px; background:#e99a00; content:''; transform:translateX(-50%); }
 .it-section h2 { margin:0 0 16px; color:#123f3b; font-size:30px; font-weight:500; text-align:center; text-transform:uppercase; }
 .it-section .section-subtext { max-width:800px; margin:0 auto 46px; color:#687572; font-size:17px; line-height:1.65; text-align:center; }
 .objectives-section { position:relative; z-index:2; padding:80px 0 34px; }
@@ -217,7 +222,8 @@ function scrollToTop() {
 .curriculum-section { padding:45px 0 80px; }
 .curriculum-section h2 { margin-bottom:16px; }
 .curriculum-section .section-subtext { margin-bottom:36px; }
-.curriculum-list { max-width:1050px; margin:0 auto; padding-left:25px; font-size:17px; letter-spacing:.04em; line-height:1.8; }
+.curriculum-panel { max-width:1050px; margin:0 auto; padding:30px 36px; border-left:4px solid #e99a00; border-radius:8px; background:#f5f8f6; }
+.curriculum-list { margin:0 auto; padding-left:25px; font-size:17px; letter-spacing:.04em; line-height:1.8; }
 .curriculum-list > li { margin-bottom:8px; padding-left:5px; }
 .knowledge-list { margin-top:12px; padding-left:46px; list-style-type:'–  '; }
 .knowledge-list li { padding-left:6px; }
@@ -284,6 +290,7 @@ function scrollToTop() {
   .it-section .rationale-subtext { margin-bottom:52px; }
   .rationale-copy h3,.curriculum-section h2 { font-size:23px; }
   .rationale-copy p { font-size:15px; line-height:1.75; }
+  .curriculum-panel { padding:22px 20px; }
   .it-society-section { min-height:730px; }
   .society-shapes { background:linear-gradient(165deg,transparent 0 30%,#e99a00 30.1% 72%,#153f3d 72.1% 100%); }
   .society-shapes::before { clip-path:polygon(0 29%,56% 41%,100% 20%,100% 58%,52% 75%,0 63%); }
