@@ -16,9 +16,18 @@ const program = {
     'Use library automation systems and related technologies to support library operations.',
     'Conduct research, communicate effectively, and participate in continuing professional education.',
   ],
-  faculty: [
-    { name: 'Ana Mae B. Cantel, MLIS', role: 'Program Coordinator (BLIS and MLIS)', image: 'ana-cantel.jpg' },
+  careerPaths: [
+    'Library professional',
+    'Archivist or archives professional',
+    'Information professional in a knowledge center',
   ],
+  careerNote: 'CPU identifies libraries, archives, and knowledge centers as career settings for BLIS graduates.',
+  sourceUrl: 'https://cpu.edu.ph/news/featured-college-of-the-week-why-choose-college-of-computer-studies/',
+  faculty: [
+    { name: 'Ana Mae B. Cantel, MLIS', role: 'BLIS Program Coordinator and Faculty', image: 'ana-cantel.jpg' },
+  ],
+  facultyNote: 'CPU reports Ana Mae B. Cantel as a full-time faculty member for BLIS. CCS does not list additional BLIS teaching assignments.',
+  facultySource: 'https://cpu.edu.ph/news/cpu-professor-wins-special-libraries-association-asia-professional-librarian-award-2023/',
   summary: 'The Degree of Bachelor of Library and Information Science (BLIS) is a four-year program that prepares students in the development, deployment, and management of information resources in print, non-print, electronic, and digital formats.',
   primaryLabel: 'Curriculum',
   primaryHref: '#curriculum-description',

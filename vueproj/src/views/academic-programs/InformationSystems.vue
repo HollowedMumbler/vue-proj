@@ -3,6 +3,7 @@ import ProgramReferencePage from './ProgramReferencePage.vue'
 
 const program = {
   title: 'Information Systems',
+  sourceUrl: 'https://ccs.cpu.edu.ph/information-systems/',
   curriculumStandard: 'Based on CHED Memorandum Order No. 25, s. 2015 · Effective Academic Year 2018–2019',
   objectives: [
     'Apply information technology to organizational processes and business needs.',
@@ -16,6 +17,13 @@ const program = {
     'Use business and computing knowledge to support organizational decisions and operations.',
     'Work effectively in teams and communicate with technical and nontechnical audiences.',
   ],
+  careerPaths: [
+    'Business systems analyst',
+    'Information systems specialist',
+    'Systems analyst or designer',
+    'IT project coordinator',
+  ],
+  careerNote: 'These are possible pathways inferred from CCS’s published focus on business processes and information systems.',
   faculty: [
     { name: 'Rea P. Balontong, MBA', role: 'Department Head (IT & IS)', image: 'rea-balontong.jpg' },
     { name: 'Leo Paulo B. Beldia', role: 'BSIT and BSIS Program', image: 'leo-beldia.jpg' },

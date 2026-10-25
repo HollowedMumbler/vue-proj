@@ -2,6 +2,8 @@
 defineProps({
   programName: { type: String, required: true },
   people: { type: Array, required: true },
+  assignmentNote: { type: String, default: '' },
+  roleSource: { type: String, default: 'https://cpu.edu.ph/news/cpu-ccs-kicks-off-the-school-year-with-soiree-the-2025-acquaintance-party/' },
 })
 </script>
 
@@ -9,8 +11,8 @@ defineProps({
   <section class="program-faculty" :aria-label="`${programName} faculty and coordinator`">
     <div class="program-faculty-heading">
       <p>PEOPLE BEHIND THE PROGRAM</p>
-      <h2>Faculty and Program Coordinator</h2>
-      <p class="program-faculty-note">Names and roles are listed as published by the College of Computer Studies.</p>
+      <h2>Faculty and Program Leadership</h2>
+      <p class="program-faculty-note">Names and program roles follow published CCS and CPU information.</p>
     </div>
     <div class="program-faculty-grid">
       <article v-for="person in people" :key="person.name" class="program-person">
@@ -21,8 +23,10 @@ defineProps({
         </div>
       </article>
     </div>
-    <p v-if="people.every((person) => person.role.includes('Program Coordinator'))" class="program-faculty-note assignment-note">
-      CCS’s public faculty listing names a program coordinator for this program but does not specify additional faculty assignments.
+    <p v-if="assignmentNote" class="program-faculty-note assignment-note">{{ assignmentNote }}</p>
+    <p class="program-faculty-sources">
+      <a href="https://ccs.cpu.edu.ph/faculty-and-staff/" target="_blank" rel="noopener noreferrer">CCS faculty listing</a>
+      <a v-if="roleSource" :href="roleSource" target="_blank" rel="noopener noreferrer">CPU program role source</a>
     </p>
   </section>
 </template>
@@ -39,5 +43,7 @@ defineProps({
 .program-person h3 { margin:0 0 5px; color:#194641; font-size:16px; line-height:1.35; }
 .program-person p { margin:0; color:#687572; font-size:13px; line-height:1.45; }
 .assignment-note { margin-top:22px; }
+.program-faculty-sources { display:flex; justify-content:center; flex-wrap:wrap; gap:18px; margin:18px auto 0; }
+.program-faculty-sources a { color:#194641; font-size:13px; font-weight:700; text-decoration-color:#e99a00; text-underline-offset:3px; }
 @media(max-width:600px) { .program-faculty { padding:54px 20px; } .program-person { min-height:96px; } }
 </style>

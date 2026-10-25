@@ -2,6 +2,7 @@
 import PageHeader from '../../PageHeader.vue'
 import ProgramCampusLife from './ProgramCampusLife.vue'
 import ProgramFaculty from './ProgramFaculty.vue'
+import ProgramCareerPaths from './ProgramCareerPaths.vue'
 
 const objectives = [
   'Plan, develop, integrate, and manage information technology infrastructure to address organizational needs.',
@@ -10,13 +11,18 @@ const objectives = [
   'Collaborate effectively, contribute to IT project planning, and practice professional and ethical responsibility.',
 ]
 
+const careerPaths = [
+  'IT support specialist',
+  'Systems administrator',
+]
+
 const programFaculty = [
   { name: 'Leo Paulo B. Beldia', role: 'BSIT and BSIS Program', image: 'leo-beldia.jpg' },
   { name: 'Lesley Joy L. Dignadice, MBA', role: 'BSIT and BSIS Program', image: 'lesley-dignadice.jpg' },
   { name: 'Rodolfo C. Eregia, Jr.', role: 'BSIT and BSIS Program', image: 'rodolfo-eregia.jpg' },
   { name: 'Donie S. Jardeleza, MSCS', role: 'BSIT and BSIS Program', image: 'donie-jardeleza.jpg' },
   { name: 'Antonio M. Montaño, Jr.', role: 'BSIT and BSIS Program', image: 'antonio-montano.jpg' },
-  { name: 'Rose Leah Joy A. Ojacastro, MSCS', role: 'BSIT and BSIS Program', image: 'rose-ojacastro.jpg' },
+  { name: 'Rose Leah Joy A. Ojacastro, MSCS', role: 'Head of BSIT · BSIT and BSIS Program', image: 'rose-ojacastro.jpg' },
   { name: 'Rea P. Balontong, MBA', role: 'Department Head (IT & IS)', image: 'rea-balontong.jpg' },
 ]
 
@@ -100,6 +106,7 @@ function scrollToTop() {
         <li><a href="#program-outcomes">Program Outcomes</a></li>
         <li><a href="#curriculum-rationale">Curriculum Rationale</a></li>
         <li><a href="#curriculum-description">Curriculum Description</a></li>
+        <li><a href="#career-opportunities">Career Opportunities</a></li>
         <li><a href="#campus-life">Student Organization</a></li>
         <li><a href="#graduate-outcomes">Graduate Outcomes</a></li>
       </ul>
@@ -148,6 +155,13 @@ function scrollToTop() {
         </ul>
       </div>
     </section>
+
+    <ProgramCareerPaths
+      title="Information Technology Career Opportunities"
+      :paths="careerPaths"
+      note="CPU identifies these as career directions for BSIT graduates. CCS also highlights networking, cybersecurity, and database administration as study areas."
+      source-url="https://cpu.edu.ph/news/featured-college-of-the-week-why-choose-college-of-computer-studies/"
+    />
 
     <ProgramCampusLife
       organization-name="Information Technology Society"

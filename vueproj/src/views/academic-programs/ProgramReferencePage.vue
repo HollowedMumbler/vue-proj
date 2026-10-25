@@ -2,6 +2,7 @@
 import PageHeader from '../../PageHeader.vue'
 import ProgramCampusLife from './ProgramCampusLife.vue'
 import ProgramFaculty from './ProgramFaculty.vue'
+import ProgramCareerPaths from './ProgramCareerPaths.vue'
 
 defineProps({ program: { type: Object, required: true } })
 
@@ -34,7 +35,12 @@ function scrollToTop() {
       </div>
     </section>
 
-    <ProgramFaculty :program-name="program.title" :people="program.faculty" />
+    <ProgramFaculty
+      :program-name="program.title"
+      :people="program.faculty"
+      :assignment-note="program.facultyNote"
+      :role-source="program.facultySource"
+    />
 
     <section id="objectives" class="reference-section objectives-section">
       <p class="section-kicker"><span class="section-index">01</span> Program Design</p>
@@ -47,6 +53,7 @@ function scrollToTop() {
         <li><a href="#program-outcomes">Program Outcomes</a></li>
         <li><a href="#curriculum-rationale">Curriculum Rationale</a></li>
         <li><a href="#curriculum-description">Curriculum Description</a></li>
+        <li><a href="#career-opportunities">Career Opportunities</a></li>
         <li><a href="#campus-life">Student Organization</a></li>
         <li><a href="#graduate-outcomes">Graduate Outcomes</a></li>
       </ul>
@@ -99,6 +106,13 @@ function scrollToTop() {
         </ul>
       </div>
     </section>
+
+    <ProgramCareerPaths
+      :title="`${program.title} Career Opportunities`"
+      :paths="program.careerPaths"
+      :note="program.careerNote"
+      :source-url="program.sourceUrl"
+    />
 
     <ProgramCampusLife
       :organization-name="program.organizationName"

@@ -2,6 +2,7 @@
 import PageHeader from '../../PageHeader.vue'
 import ProgramCampusLife from './ProgramCampusLife.vue'
 import ProgramFaculty from './ProgramFaculty.vue'
+import ProgramCareerPaths from './ProgramCareerPaths.vue'
 
 const objectives = [
   'Build a strong foundation in computing concepts, algorithms, and mathematical reasoning.',
@@ -10,10 +11,16 @@ const objectives = [
   'Communicate and collaborate effectively while practicing ethical responsibility and lifelong learning.',
 ]
 
+const careerPaths = [
+  'Software engineer',
+  'Data scientist',
+  'Systems developer',
+]
+
 const programFaculty = [
   { name: 'Pedro Peter Rhys B. Cambronero, MSCS', role: 'BSCS Program', image: 'pedro-cambronero.jpg' },
   { name: 'Ma. Sheila C. Sapul, Ph. D.', role: 'BSCS Program', image: 'sheila-sapul.jpg' },
-  { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Coordinator (BSCS, BSDMIA, and MSCS)', image: 'marjee-parreno.jpg' },
+  { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Head (BSCS and BSDMIA)', image: 'marjee-parreno.jpg' },
 ]
 
 const programOutcomes = [
@@ -93,6 +100,7 @@ function scrollToTop() {
         <li><a href="#program-outcomes">Program Outcomes</a></li>
         <li><a href="#curriculum-rationale">Curriculum Rationale</a></li>
         <li><a href="#curriculum-description">Curriculum Description</a></li>
+        <li><a href="#career-opportunities">Career Opportunities</a></li>
         <li><a href="#campus-life">Student Organization</a></li>
         <li><a href="#graduate-outcomes">Graduate Outcomes</a></li>
       </ul>
@@ -141,6 +149,13 @@ function scrollToTop() {
         </ul>
       </div>
     </section>
+
+    <ProgramCareerPaths
+      title="Computer Science Career Opportunities"
+      :paths="careerPaths"
+      note="CPU identifies these as career directions for BSCS graduates."
+      source-url="https://cpu.edu.ph/news/featured-college-of-the-week-why-choose-college-of-computer-studies/"
+    />
 
     <ProgramCampusLife
       organization-name="Computer Science Society"

@@ -5,8 +5,8 @@ defineEmits(['navigate'])
 
 const coordinators = [
   { name: 'Rea P. Balontong, MBA', role: 'Department Head (IT & IS)', image: 'rea-balontong.jpg' },
-  { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Coordinator (BSCS, BSDMIA, and MSCS)', image: 'marjee-parreno.jpg' },
-  { name: 'Ana Mae B. Cantel, MLIS', role: 'Program Coordinator (BLIS and MLIS)', image: 'ana-cantel.jpg' },
+  { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Head (BSCS and BSDMIA)', image: 'marjee-parreno.jpg' },
+  { name: 'Ana Mae B. Cantel, MLIS', role: 'BLIS Program Coordinator and Faculty', image: 'ana-cantel.jpg' },
   { name: 'Lennon D. Pajar', role: 'Computer Laboratory Coordinator', image: 'lennon-pajar.jpg' },
 ]
 
@@ -17,12 +17,12 @@ const faculty = [
   { name: 'Rodolfo C. Eregia, Jr.', role: 'BSIT and BSIS Program', image: 'rodolfo-eregia.jpg' },
   { name: 'Donie S. Jardeleza, MSCS', role: 'BSIT and BSIS Program', image: 'donie-jardeleza.jpg' },
   { name: 'Antonio M. Montaño, Jr.', role: 'BSIT and BSIS Program', image: 'antonio-montano.jpg' },
-  { name: 'Rose Leah Joy A. Ojacastro, MSCS', role: 'BSIT and BSIS Program', image: 'rose-ojacastro.jpg' },
+  { name: 'Rose Leah Joy A. Ojacastro, MSCS', role: 'Head of BSIT · BSIT and BSIS Program', image: 'rose-ojacastro.jpg' },
   { name: 'Ma. Sheila C. Sapul, Ph. D.', role: 'BSCS Program', image: 'sheila-sapul.jpg' },
 ]
 
 const facultyGroups = [
-  { program: 'Bachelor of Science in Information Technology (BSIT)', people: faculty.filter((person) => person.role.includes('BSIT')) },
+  { program: 'Bachelor of Science in Information Technology (BSIT)', people: [...faculty.filter((person) => person.role.includes('BSIT')), coordinators[0]] },
   { program: 'Bachelor of Science in Computer Science (BSCS)', people: [...faculty.filter((person) => person.role.includes('BSCS')), coordinators[1]] },
   { program: 'Bachelor of Science in Digital Media and Interactive Arts (BSDMIA)', people: [coordinators[1]], coordinatorOnly: true },
   { program: 'Bachelor of Library and Information Science (BLIS)', people: [coordinators[2]], coordinatorOnly: true },
@@ -96,7 +96,7 @@ function scrollToTop() {
         <p>Teaching as a Way of Life</p>
         <h2>Faculty by Program</h2>
       </div>
-      <p class="faculty-assignment-note">These groupings use the program affiliations published by CCS. For BSDMIA and BLIS, the public listing identifies a coordinator but does not list additional faculty assignments.</p>
+      <p class="faculty-assignment-note">These groupings use published CCS faculty affiliations and CPU program leadership reports. The public CCS faculty roster does not list additional teaching assignments for BSDMIA or BLIS.</p>
       <div v-for="group in facultyGroups" :key="group.program" class="faculty-program-group">
         <h3>{{ group.program }}</h3>
         <div class="people-grid">
@@ -112,7 +112,7 @@ function scrollToTop() {
             </div>
           </article>
         </div>
-        <p v-if="group.coordinatorOnly" class="faculty-assignment-note group-assignment-note">Only the program coordinator is identified for this program in the public CCS faculty listing.</p>
+        <p v-if="group.coordinatorOnly" class="faculty-assignment-note group-assignment-note">The published sources identify this program lead, but do not list additional assigned instructors.</p>
       </div>
     </section>
 

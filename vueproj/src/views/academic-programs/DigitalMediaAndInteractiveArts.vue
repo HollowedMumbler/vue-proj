@@ -3,6 +3,7 @@ import ProgramReferencePage from './ProgramReferencePage.vue'
 
 const program = {
   title: 'Bachelor of Science in Digital Media and Interactive Arts (BSDMIA)',
+  sourceUrl: 'https://ccs.cpu.edu.ph/digital-media-and-interactive-arts/',
   curriculumStandard: 'Based on CHED Memorandum Order No. 19, s. 2016',
   objectives: [
     'Develop creative skills in applied arts and digital media technologies.',
@@ -15,9 +16,21 @@ const program = {
     'Combine traditional arts with digital media and communicate creative work to diverse audiences.',
     'Work effectively in multidisciplinary teams and continue professional learning.',
   ],
-  faculty: [
-    { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Coordinator (BSCS, BSDMIA, and MSCS)', image: 'marjee-parreno.jpg' },
+  careerPaths: [
+    'Animator or multimedia artist',
+    'Graphic designer',
+    'Game designer',
+    'Web designer',
+    'Advertising executive',
+    'Art director or digital artist',
+    'Freelance artist',
   ],
+  careerNote: 'These examples are listed in the CCS BSDMIA program description.',
+  faculty: [
+    { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Head (BSCS and BSDMIA)', image: 'marjee-parreno.jpg' },
+  ],
+  facultyNote: 'CPU identifies Marjee Rose B. Parreño as head of BSCS and BSDMIA. CCS does not list additional BSDMIA teaching assignments.',
+  facultySource: 'https://cpu.edu.ph/news/cpu-ccs-kicks-off-the-school-year-with-soiree-the-2025-acquaintance-party/',
   summary: 'The Degree of Bachelor of Science in Digital Media and Interactive Arts is focused on creativity, applied arts and digital media technologies.',
   primaryLabel: 'Curriculum',
   primaryHref: '#curriculum-description',
