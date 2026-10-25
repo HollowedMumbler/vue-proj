@@ -132,9 +132,11 @@
           </div>
           <a class="gold-button" href="/history">READ MORE</a>
         </div>
-        <div class="history-logo">
-          <img src="/images/ccs/cropped-CCS-Logov-new.png" alt="CCS logo" />
-        </div>
+        <figure class="history-visual">
+          <img class="history-photo" src="https://www.cpu.edu.ph/cpucmsv2/admin/UploadedMedia/Files/Media/kdcmarch2018-1.jpg" alt="Dr. Mary O’ T. Penetrante giving closing remarks at a CPU event" />
+          <img class="history-mark" src="/images/ccs/cropped-CCS-Logov-new.png" alt="CCS logo" />
+          <figcaption>Prof. Mary O’ T. Penetrante</figcaption>
+        </figure>
       </section>
 
       <!-- Dean's message preview -->

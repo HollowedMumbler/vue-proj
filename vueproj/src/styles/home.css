@@ -78,24 +78,26 @@
 .program-card p { margin: 0; color: #a1a1a1; font-size: 14px; line-height: 2; }
 /* History preview */
 .ccs-history {
-  min-height: 650px;
-  padding: 90px max(calc((100vw - 1100px) / 2), 7%);
+  min-height: 610px;
+  padding: 82px max(calc((100vw - 1100px) / 2), 7%);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
   align-items: center;
-  gap: 70px;
+  gap: clamp(42px, 6vw, 78px);
   position: relative;
-  background: #e7e7e7;
+  background: #fff;
   clip-path: polygon(0 0, 47.2% 0, 50% 4%, 52.8% 0, 100% 0, 100% 96%, 52.8% 96%, 50% 100%, 47.2% 96%, 0 96%);
 }
-.history-copy { width: 100%; max-width: 470px; justify-self: end; position: relative; z-index: 1; }
-.history-logo { display: grid; place-items: center; }
-.history-logo img { width: min(100%, 390px); height: auto; object-fit: contain; }
-.section-label { margin: 0 0 12px; color: var(--ccs-text); font-size: 13px; font-weight: 700; }
-.history-copy h2 { margin: 0 0 17px; color: var(--ccs-gold); font-size: 55px; font-style: italic; font-weight: 700; line-height: 1.05; }
-.history-text { padding: 22px 20px; border: 1px solid #fff9; border-radius: 10px; background: #ffffffb5; }
-.history-text p { margin: 0; color: #818181; font-size: 14px; line-height: 2; }
-.history-copy .gold-button { margin: 19px 0 0 auto; display: flex; width: fit-content; }
+.history-copy { width: 100%; max-width: 520px; justify-self: start; position: relative; z-index: 1; }
+.history-visual { width: min(100%, 400px); margin: 0 auto; position: relative; }
+.history-photo { width: 100%; height: 390px; display: block; border-radius: 12px; object-fit: cover; object-position: center 35%; box-shadow: 0 16px 34px #173e3a1f; }
+.history-mark { width: 88px; height: 88px; padding: 5px; position: absolute; top: 14px; right: 14px; border-radius: 8px; background: #fff; object-fit: contain; box-shadow: 0 5px 15px #173e3a24; }
+.history-visual figcaption { margin-top: 11px; color: #53635c; font-size: 13px; font-weight: 600; text-align: right; }
+.section-label { margin: 0 0 12px; color: var(--ccs-text); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.history-copy h2 { margin: 0 0 20px; color: var(--ccs-gold); font-size: clamp(42px, 4.4vw, 54px); font-style: italic; font-weight: 700; line-height: 1.05; }
+.history-text { padding: 22px 24px; border: 1px solid #e1e5df; border-left: 4px solid var(--ccs-gold); border-radius: 4px 10px 10px 4px; background: #fff; box-shadow: 0 10px 26px #173e3a0d; }
+.history-text p { margin: 0; color: #68736e; font-size: 15px; line-height: 1.85; }
+.history-copy .gold-button { margin: 22px 0 0; display: inline-flex; width: fit-content; }
 /* Dean's message */
 .ccs-dean { min-height: 550px; padding: 65px 20px; display: grid; grid-template-columns: 385px minmax(380px, 580px); justify-content: center; align-items: center; gap: 100px; background: #fff; }
 .dean-photo { width: 385px; height: 450px; overflow: hidden; border-radius: 28px; background: #f1f1f1; }
@@ -231,7 +233,9 @@
   .program-card p { font-size: 13px; line-height: 1.8; }
   .ccs-history { min-height: 0; padding: 65px 22px; grid-template-columns: 1fr; gap: 34px; clip-path: polygon(0 0, 45% 0, 50% 4%, 55% 0, 100% 0, 100% 96%, 55% 96%, 50% 100%, 45% 96%, 0 96%); }
   .history-copy { max-width: 470px; justify-self: center; }
-  .history-logo img { width: min(68vw, 250px); }
+  .history-visual { width: min(100%, 320px); }
+  .history-photo { height: 320px; }
+  .history-mark { width: 70px; height: 70px; top: 10px; right: 10px; }
   .history-copy h2 { font-size: 38px; }
   .history-text { padding: 18px; }
   .history-text p { font-size: 12px; }
