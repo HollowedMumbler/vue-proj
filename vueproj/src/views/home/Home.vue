@@ -160,12 +160,55 @@
 
       <!-- Recent news -->
       <section class="ccs-news" id="news">
-        <div class="ccs-news-heading"><div><p class="ccs-overline">Be updated with the College and Student Events</p><h2>News and<br />Updates</h2></div><a class="ccs-text-link" href="/news-and-updates">View more <span>↗</span></a></div>
-        <div class="ccs-news-grid">
-          <article class="ccs-news-card"><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/12/12072021-Outreach-MOA-300x225.jpg" alt="Community Engagement MOA signing ceremony" /><p class="ccs-news-date">December 8, 2021</p><h3>Community Engagement MOA Signing Ceremony</h3><p>CPU CCS and Mandurriao Elementary School began a partnership through a Memorandum of Agreement signing.</p><a class="ccs-text-link" href="https://ccs.cpu.edu.ph/2021/12/08/community-engagement-moa-signing-ceremony/">Read more <span>↗</span></a></article>
-          <article class="ccs-news-card"><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/11232021-New-Librarians-300x300.jpg" alt="Congratulations to our new librarians" /><p class="ccs-news-date">November 23, 2021</p><h3>Congratulations to our New Librarians!</h3><p>CCS celebrates the college community members who passed the librarian licensure examination.</p><a class="ccs-text-link" href="https://ccs.cpu.edu.ph/2021/11/23/congratulations-to-our-new-librarians/">Read more <span>↗</span></a></article>
-          <article class="ccs-news-card"><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/11232021-Kation-300x225.jpg" alt="CCS graduates hired by Kation Technologies" /><p class="ccs-news-date">November 23, 2021</p><h3>Kation Technologies hires CCS graduates</h3><p>The news item reports that CCS graduates joined Kation Technologies, a Microsoft Gold Partner.</p><a class="ccs-text-link" href="https://ccs.cpu.edu.ph/2021/11/23/kation-technologies-hires-ccs-graduates/">Read more <span>↗</span></a></article>
+        <div class="news-heading">
+          <h2>News and Updates</h2>
+          <p>Be Updated with the College and Student Events</p>
         </div>
+        <div class="news-card-grid">
+          <article class="news-card" tabindex="0">
+            <div class="news-card-media">
+              <img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/12/12072021-Outreach-MOA-300x225.jpg" alt="Community Engagement MOA signing ceremony" />
+              <div class="news-card-hover">
+                <p>The planned Adopt a School program paired CCS faculty with Mandurriao Elementary School staff for a virtual session on Canvas, Google Classroom, and Facebook Groups.</p>
+                <span class="news-read-more">Read more <b aria-hidden="true">↗</b></span>
+              </div>
+            </div>
+            <div class="news-card-copy">
+              <time datetime="2021-12-08">December 8, 2021</time>
+              <h3>Community Engagement MOA Signing Ceremony</h3>
+              <p>CCS and Mandurriao Elementary School formalized a partnership through a Memorandum of Agreement.</p>
+            </div>
+          </article>
+          <article class="news-card" tabindex="0">
+            <div class="news-card-media">
+              <img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/11232021-New-Librarians-300x300.jpg" alt="Congratulations to our new librarians" />
+              <div class="news-card-hover">
+                <p>CCS celebrated its new librarians after CPU first-time takers posted a 60% pass rate, above the 47.7% national rate, in the September 2021 exam.</p>
+                <span class="news-read-more">Read more <b aria-hidden="true">↗</b></span>
+              </div>
+            </div>
+            <div class="news-card-copy">
+              <time datetime="2021-11-23">November 23, 2021</time>
+              <h3>Congratulations to our New Librarians!</h3>
+              <p>The college congratulated its new librarians after the September 2021 licensure examination.</p>
+            </div>
+          </article>
+          <article class="news-card" tabindex="0">
+            <div class="news-card-media">
+              <img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/11232021-Kation-300x225.jpg" alt="CCS graduates hired by Kation Technologies" />
+              <div class="news-card-hover">
+                <p>Kation Technologies hired CCS graduates. The company is a Microsoft Gold Partner in the Philippines.</p>
+                <span class="news-read-more">Read more <b aria-hidden="true">↗</b></span>
+              </div>
+            </div>
+            <div class="news-card-copy">
+              <time datetime="2021-11-23">November 23, 2021</time>
+              <h3>Kation Technologies hires CCS graduates</h3>
+              <p>A career milestone for CCS alumni at a Microsoft Gold Partner company.</p>
+            </div>
+          </article>
+        </div>
+        <a class="gold-button" href="/news-and-updates">VIEW MORE</a>
       </section>
 
       <!-- About the CCS community -->
@@ -175,19 +218,14 @@
           <h2>WHO WE ARE</h2>
           <p>Different people united by one goal: building bridges, taking part in college life, and moving forward together.</p>
         </div>
-        <div class="video-frame" role="img" aria-label="CCS Warriors Video preview">
-          <div class="video-top">
-            <span class="video-avatar">b</span>
-            <span><b>CCS Warriors Video</b><small>boudemos</small></span>
-            <span class="video-controls">◖　CC　⚙</span>
-          </div>
-          <div class="video-poster">
-            <img src="/images/ccs/Warriors-Logo-2.png" alt="" />
-            <strong>COLLEGE OF COMPUTER STUDIES<br />TO INFINITY &amp; BEYOND</strong>
-            <span>#CCSTHEBEST</span>
-            <i>▶</i>
-          </div>
-          <div class="video-progress"><span></span></div>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/UVUk2i0fm50"
+            title="CCS Warriors Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </section>
 
