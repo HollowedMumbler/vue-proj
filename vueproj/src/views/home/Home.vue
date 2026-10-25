@@ -3,7 +3,8 @@
     <!-- Main navigation -->
     <header class="ccs-header">
       <a class="ccs-brand" href="#home" aria-label="College of Computer Studies home">
-        <img src="/images/ccs/Warriors-Logo-2.png" alt="CPU Warriors" />
+        <img class="brand-top" src="/images/ccs/cropped-CCS-Logov-new.png" alt="CCS" />
+        <img class="brand-scrolled" src="/images/ccs/Warriors-Logo-2.png" alt="CPU Warriors" />
       </a>
 
       <details class="ccs-mobile-menu">
@@ -261,4 +262,5 @@
   </div>
 </template>
 
+<script src="../../scripts/home-header.js"></script>
 <style src="../../styles/home.css"></style>
