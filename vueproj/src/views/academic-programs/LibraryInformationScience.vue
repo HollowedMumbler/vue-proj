@@ -2,7 +2,23 @@
 import ProgramReferencePage from './ProgramReferencePage.vue'
 
 const program = {
-  title: 'Library Information Science',
+  title: 'Bachelor of Library and Information Science (BLIS)',
+  curriculumStandard: 'CHED policies and standards for Library and Information Science, within the outcomes-based education framework',
+  objectives: [
+    'Select, evaluate, organize, and share information resources in print, multimedia, electronic, and digital formats.',
+    'Respond to changing information needs through effective library and information services.',
+    'Use library technologies and research methods to improve access to information and support learning.',
+    'Practice professional, ethical service and continue developing information science skills.',
+  ],
+  programOutcomes: [
+    'Select, evaluate, organize, and disseminate information resources in a range of formats.',
+    'Identify user needs and assess the effectiveness of information services.',
+    'Use library automation systems and related technologies to support library operations.',
+    'Conduct research, communicate effectively, and participate in continuing professional education.',
+  ],
+  faculty: [
+    { name: 'Ana Mae B. Cantel, MLIS', role: 'Program Coordinator (BLIS and MLIS)', image: 'ana-cantel.jpg' },
+  ],
   summary: 'The Degree of Bachelor of Library and Information Science (BLIS) is a four-year program that prepares students in the development, deployment, and management of information resources in print, non-print, electronic, and digital formats.',
   primaryLabel: 'Curriculum',
   primaryHref: '#curriculum-description',
@@ -18,8 +34,7 @@ const program = {
     'The LIS curriculum is designed to equip professionals with the composite knowledge, skills, attitudes, and tools to respond to the changing information needs of society.',
   ],
   organizationText: [
-    'The Computer Science Society embraces its Mission to promote the Computer Science Course, to guide and prepare the students, to grow and strengthen the bonds of each member as one family, and to utilize the resources of the program to provide service to society and emphasize to students the need of lifelong learning, ethical conduct and an understanding of the diverse social context in which Computer Science is practiced.',
-    'We furthermore seek to provide excellence in activities and outreaches to develop the community of all Computer Science Students to help and support its members to reach their goals in the ever advance, 21st century.',
+    'The College of Computer Studies identifies the Library and Information Science Students Organization (LISSO) with the BLIS program. The public program page does not provide a separate organization mission statement.',
   ],
   degreeTitle: 'Bachelor of Library and Information Science (BLIS)',
   graduateOutcomes: [

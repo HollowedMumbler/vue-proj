@@ -2,7 +2,22 @@
 import ProgramReferencePage from './ProgramReferencePage.vue'
 
 const program = {
-  title: 'Digital Media and Interactive Arts',
+  title: 'Bachelor of Science in Digital Media and Interactive Arts (BSDMIA)',
+  curriculumStandard: 'Based on CHED Memorandum Order No. 19, s. 2016',
+  objectives: [
+    'Develop creative skills in applied arts and digital media technologies.',
+    'Create digital media work for fields such as entertainment, education, advertising, film, and corporate communication.',
+    'Use current tools and collaborative methods to design, produce, and evaluate interactive media.',
+  ],
+  programOutcomes: [
+    'Apply digital media arts, production, delivery, and management knowledge using established practices.',
+    'Identify user requirements and create, evaluate, and deliver digital media solutions.',
+    'Combine traditional arts with digital media and communicate creative work to diverse audiences.',
+    'Work effectively in multidisciplinary teams and continue professional learning.',
+  ],
+  faculty: [
+    { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Coordinator (BSCS, BSDMIA, and MSCS)', image: 'marjee-parreno.jpg' },
+  ],
   summary: 'The Degree of Bachelor of Science in Digital Media and Interactive Arts is focused on creativity, applied arts and digital media technologies.',
   primaryLabel: 'Curriculum',
   primaryHref: '#curriculum-description',

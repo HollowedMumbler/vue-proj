@@ -1,23 +1,9 @@
 <script setup>
 import PageHeader from '../../PageHeader.vue'
+import ProgramCampusLife from './ProgramCampusLife.vue'
+import ProgramFaculty from './ProgramFaculty.vue'
 
 defineProps({ program: { type: Object, required: true } })
-
-const objectives = [
-  'Exhibit skills, knowledge and leadership to excel in their information technology careers and related discipline.',
-  'Exhibit high standard of professionalism who are effective members of multi-discipline development teams.',
-  'Involved in scholarly activities, research and outreach that contributes to the improvement and transformation of society.',
-  'Demonstrate ethical, professional, spiritual values, and social responsibility associated with their Information Technology careers and related professions.',
-  'Exhibit proficiency in the use of traditional and digital media arts, designing, developing and implementing digital media solutions in fields of entertainment and corporate environments.',
-]
-
-const programOutcomes = [
-  'articulate and discuss the latest developments in the specific field of practice. (Philippine Qualifications Framework (PQF) level 6 descriptor) (Graduate Outcomes: CS 10, IS 10, IT13).',
-  'effectively communicate orally and in writing using both English and Filipino (Graduate Outcomes: CS08, IS08, IT10).',
-  'work effectively and independently in multi-disciplinary and multi-cultural teams. (PQF level 6 descriptor) (Graduate Outcomes: CS07, IS07, IT08).',
-  'act in recognition of professional, social and ethical responsibility (Graduate Outcomes: CS09, IS09, IT12).',
-  'preserve and promote “Filipino historical and cultural heritage” (based on RA 7722).',
-]
 
 const sharedOutcomes = [
   'analyze complex problems, and identify and define the computing requirements needed to design an appropriate solution (Graduate Outcomes: CS02, IS02-03, IT03).',
@@ -48,12 +34,14 @@ function scrollToTop() {
       </div>
     </section>
 
+    <ProgramFaculty :program-name="program.title" :people="program.faculty" />
+
     <section id="objectives" class="reference-section objectives-section">
-      <p class="section-kicker">Program Design</p>
-      <h2>Program Educational Objectives</h2>
-      <p class="section-subtext">These objectives outline the professional qualities and contributions the {{ program.title }} program aims to develop.</p>
+      <p class="section-kicker"><span class="section-index">01</span> Program Design</p>
+      <h2>Program Objectives</h2>
+      <p class="section-subtext">A concise summary of the program focus and graduate competencies published by CCS.</p>
       <ol class="objectives-list">
-        <li v-for="objective in objectives" :key="objective">{{ objective }}</li>
+        <li v-for="objective in program.objectives" :key="objective">{{ objective }}</li>
       </ol>
       <ul class="section-links" :aria-label="`${program.title} page sections`">
         <li><a href="#program-outcomes">Program Outcomes</a></li>
@@ -65,14 +53,14 @@ function scrollToTop() {
     </section>
 
     <section id="program-outcomes" class="reference-section program-outcomes-section">
-      <p class="section-kicker">Graduate Preparation</p>
+      <p class="section-kicker"><span class="section-index">02</span> Graduate Preparation</p>
       <h2>Program Outcomes</h2>
       <p class="section-subtext">These outcomes turn the program’s learning goals into practical knowledge, skills, and professional abilities.</p>
       <div class="outcome-copy">
         <h3>Professional and General Outcomes</h3>
         <p class="subsection-subtext">Graduates are prepared to communicate, collaborate, act responsibly, and contribute to their communities.</p>
         <ol class="lettered-list">
-          <li v-for="outcome in programOutcomes" :key="outcome">{{ outcome }}</li>
+          <li v-for="outcome in program.programOutcomes" :key="outcome">{{ outcome }}</li>
         </ol>
         <template v-if="program.hasSharedOutcomes">
           <h3>Applied Computing Outcomes</h3>
@@ -85,41 +73,42 @@ function scrollToTop() {
     </section>
 
     <section id="curriculum-rationale" class="reference-section rationale-section">
-      <p class="section-kicker">Curriculum Foundations</p>
+      <p class="section-kicker"><span class="section-index">03</span> Curriculum Foundations</p>
       <h2 class="ched-heading">Curriculum Rationale</h2>
-      <p class="section-subtext rationale-subtext">Based on CHED Memo Order No. 25, s. 2015 · Effective Academic Year 2018–2019</p>
+      <p class="section-subtext rationale-subtext">{{ program.curriculumStandard }}</p>
       <div class="rationale-copy">
         <p v-for="paragraph in program.rationale" :key="paragraph">{{ paragraph }}</p>
       </div>
     </section>
 
     <section id="curriculum-description" class="reference-section curriculum-section">
-      <p class="section-kicker">What You Will Study</p>
+      <p class="section-kicker"><span class="section-index">04</span> What You Will Study</p>
       <h2>Curriculum Description:</h2>
       <p class="section-subtext">This section outlines how the program builds knowledge and practical skills in its field.</p>
-      <div v-if="program.curriculumParagraphs" class="curriculum-prose">
-        <p v-for="paragraph in program.curriculumParagraphs" :key="paragraph">{{ paragraph }}</p>
+      <div class="curriculum-panel">
+        <div v-if="program.curriculumParagraphs" class="curriculum-prose">
+          <p v-for="paragraph in program.curriculumParagraphs" :key="paragraph">{{ paragraph }}</p>
+        </div>
+        <ul v-if="program.curriculumItems" class="curriculum-list">
+          <li v-for="item in program.curriculumItems" :key="item.text">
+            {{ item.text }}
+            <ul v-if="item.children" class="knowledge-list">
+              <li v-for="child in item.children" :key="child">{{ child }}</li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      <ul v-if="program.curriculumItems" class="curriculum-list">
-        <li v-for="item in program.curriculumItems" :key="item.text">
-          {{ item.text }}
-          <ul v-if="item.children" class="knowledge-list">
-            <li v-for="child in item.children" :key="child">{{ child }}</li>
-          </ul>
-        </li>
-      </ul>
     </section>
 
-    <section id="campus-life" class="organization-section">
-      <div class="organization-shapes" aria-hidden="true"></div>
-      <div class="organization-inner">
-        <img class="organization-logo organization-section-logo" :src="program.logo" :alt="program.organizationName" />
-        <p v-for="paragraph in program.organizationText" :key="paragraph">{{ paragraph }}</p>
-      </div>
-    </section>
+    <ProgramCampusLife
+      :organization-name="program.organizationName"
+      :logo="program.logo"
+      :logo-alt="program.organizationName"
+      :paragraphs="program.organizationText"
+    />
 
     <section id="graduate-outcomes" class="reference-section graduate-section">
-      <p class="section-kicker">Degree Competencies</p>
+      <p class="section-kicker"><span class="section-index">06</span> Degree Competencies</p>
       <h2>{{ program.degreeTitle }}</h2>
       <p class="section-subtext">The outcomes below describe the knowledge and capabilities expected of {{ program.title }} graduates.</p>
       <table class="graduate-table">
@@ -168,6 +157,9 @@ function scrollToTop() {
 .reference-section { width:min(1330px,calc(100% - 100px)); margin:0 auto; scroll-margin-top:110px; }
 .section-kicker { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 12px; color:#bd8318; font-size:13px; font-weight:700; letter-spacing:.14em; text-align:center; text-transform:uppercase; }
 .section-kicker::before,.section-kicker::after { width:28px; height:1px; background:#e5a32a; content:''; }
+.section-index { display:inline-grid; width:32px; height:25px; place-items:center; border:1px solid #e5a32a80; border-radius:14px; color:#8c681d; font-size:10px; letter-spacing:.04em; }
+.program-outcomes-section,.rationale-section,.curriculum-section,.graduate-section { position:relative; border-top:1px solid #e6ebe8; }
+.program-outcomes-section::before,.rationale-section::before,.curriculum-section::before,.graduate-section::before { position:absolute; top:-1px; left:50%; width:54px; height:2px; background:#e99a00; content:''; transform:translateX(-50%); }
 .reference-section h2 { margin:0 0 16px; color:#123f3b; font-size:30px; font-weight:500; text-align:center; text-transform:uppercase; }
 .reference-section .section-subtext { max-width:800px; margin:0 auto 46px; color:#687572; font-size:17px; line-height:1.65; text-align:center; }
 .objectives-section { position:relative; z-index:2; padding:80px 0 34px; }
@@ -193,8 +185,9 @@ function scrollToTop() {
 .curriculum-section { padding:45px 0 80px; }
 .curriculum-section h2 { margin-bottom:16px; }
 .curriculum-section .section-subtext { margin-bottom:36px; }
-.curriculum-prose { max-width:1050px; margin:0 auto; }
-.curriculum-list { max-width:1050px; margin:0 auto; padding-left:25px; font-size:17px; letter-spacing:.04em; line-height:1.8; }
+.curriculum-panel { max-width:1050px; margin:0 auto; padding:30px 36px; border-left:4px solid #e99a00; border-radius:8px; background:#f5f8f6; }
+.curriculum-prose { margin:0 auto; }
+.curriculum-list { margin:0 auto; padding-left:25px; font-size:17px; letter-spacing:.04em; line-height:1.8; }
 .curriculum-list > li { margin-bottom:8px; padding-left:5px; }
 .knowledge-list { margin-top:12px; padding-left:46px; list-style-type:'–  '; }
 .knowledge-list li { padding-left:6px; }
@@ -261,6 +254,7 @@ function scrollToTop() {
   .reference-section .rationale-subtext { margin-bottom:52px; }
   .rationale-copy h3,.curriculum-section h2 { font-size:23px; }
   .rationale-copy p,.curriculum-prose p { font-size:15px; line-height:1.75; }
+  .curriculum-panel { padding:22px 20px; }
   .organization-section { min-height:730px; }
   .organization-shapes { background:linear-gradient(165deg,transparent 0 30%,#e99a00 30.1% 72%,#153f3d 72.1% 100%); }
   .organization-shapes::before { clip-path:polygon(0 29%,56% 41%,100% 20%,100% 58%,52% 75%,0 63%); }

@@ -3,6 +3,28 @@ import ProgramReferencePage from './ProgramReferencePage.vue'
 
 const program = {
   title: 'Information Systems',
+  curriculumStandard: 'Based on CHED Memorandum Order No. 25, s. 2015 · Effective Academic Year 2018–2019',
+  objectives: [
+    'Apply information technology to organizational processes and business needs.',
+    'Analyze organizational and technical requirements when designing information systems.',
+    'Connect technical teams, management, and users through effective communication and collaboration.',
+    'Use professional, ethical, and lifelong learning practices in information systems work.',
+  ],
+  programOutcomes: [
+    'Analyze organizational problems and define appropriate information systems requirements.',
+    'Design, implement, and evaluate information systems and related processes.',
+    'Use business and computing knowledge to support organizational decisions and operations.',
+    'Work effectively in teams and communicate with technical and nontechnical audiences.',
+  ],
+  faculty: [
+    { name: 'Rea P. Balontong, MBA', role: 'Department Head (IT & IS)', image: 'rea-balontong.jpg' },
+    { name: 'Leo Paulo B. Beldia', role: 'BSIT and BSIS Program', image: 'leo-beldia.jpg' },
+    { name: 'Lesley Joy L. Dignadice, MBA', role: 'BSIT and BSIS Program', image: 'lesley-dignadice.jpg' },
+    { name: 'Rodolfo C. Eregia, Jr.', role: 'BSIT and BSIS Program', image: 'rodolfo-eregia.jpg' },
+    { name: 'Donie S. Jardeleza, MSCS', role: 'BSIT and BSIS Program', image: 'donie-jardeleza.jpg' },
+    { name: 'Antonio M. Montaño, Jr.', role: 'BSIT and BSIS Program', image: 'antonio-montano.jpg' },
+    { name: 'Rose Leah Joy A. Ojacastro, MSCS', role: 'BSIT and BSIS Program', image: 'rose-ojacastro.jpg' },
+  ],
   summary: 'The Bachelor of Science in Information System integrates strong business background with advanced training in applying information technology to business processes.',
   primaryLabel: 'Objectives',
   primaryHref: '#objectives',

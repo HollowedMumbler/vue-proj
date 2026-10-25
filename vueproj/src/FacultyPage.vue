@@ -21,6 +21,13 @@ const faculty = [
   { name: 'Ma. Sheila C. Sapul, Ph. D.', role: 'BSCS Program', image: 'sheila-sapul.jpg' },
 ]
 
+const facultyGroups = [
+  { program: 'Bachelor of Science in Information Technology (BSIT)', people: faculty.filter((person) => person.role.includes('BSIT')) },
+  { program: 'Bachelor of Science in Computer Science (BSCS)', people: [...faculty.filter((person) => person.role.includes('BSCS')), coordinators[1]] },
+  { program: 'Bachelor of Science in Digital Media and Interactive Arts (BSDMIA)', people: [coordinators[1]], coordinatorOnly: true },
+  { program: 'Bachelor of Library and Information Science (BLIS)', people: [coordinators[2]], coordinatorOnly: true },
+]
+
 const staff = [
   { name: 'Chrislyn C. Castaño', role: 'Secretary', image: 'chrislyn-castano.jpg' },
   { name: 'A.M.P. Latter P. Taasan', role: 'Computer Laboratory Technician', image: 'latter-taasan.jpg' },
@@ -43,8 +50,8 @@ function scrollToTop() {
         <h2>Meet Our<br />People</h2>
       </div>
       <div class="people-intro-copy">
-        <p>Lorem ipsum dolor sit amet, conetur adiping elit Lorem ipsum dolor sit amet, cons ectetur adipiscing elit Lorem ipsum dolor sit altmet, conse ctetur adipiscing elit aloma lomiur off</p>
-        <p>silder tolos. Lorem ipsum dolor sitlor amet, conetur adiping elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Meet the faculty, program coordinators, and staff who support learning and student life at the College of Computer Studies.</p>
+        <p>Program assignments and designations shown here follow the information published by CCS.</p>
       </div>
     </section>
 
@@ -87,20 +94,25 @@ function scrollToTop() {
     <section class="people-section faculty-members-section">
       <div class="people-section-title">
         <p>Teaching as a Way of Life</p>
-        <h2>Faculty</h2>
+        <h2>Faculty by Program</h2>
       </div>
-      <div class="people-grid">
-        <article v-for="person in faculty" :key="person.name" class="person-card" tabindex="0">
-          <div class="person-photo">
-            <img :src="`/ccs-home/faculty/${person.image}`" :alt="person.name" loading="lazy" />
-            <div class="profile-caption">
-              <h3>{{ person.name }}</h3><p>{{ person.role }}</p>
-              <div class="profile-socials" aria-label="Social media">
-                <span aria-label="Facebook">f</span><span class="twitter-icon" aria-label="Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.932 4.932 0 0 0 2.163-2.723 9.99 9.99 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.64 3.162a4.916 4.916 0 0 0 1.523 6.557 4.9 4.9 0 0 1-2.229-.616v.062a4.918 4.918 0 0 0 3.946 4.817 4.936 4.936 0 0 1-2.224.084 4.926 4.926 0 0 0 4.6 3.42A9.876 9.876 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.01-7.503 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.59z" /></svg></span><span class="google-icon" aria-label="Google Plus">G+</span><span class="linkedin-icon" aria-label="LinkedIn">in</span>
+      <p class="faculty-assignment-note">These groupings use the program affiliations published by CCS. For BSDMIA and BLIS, the public listing identifies a coordinator but does not list additional faculty assignments.</p>
+      <div v-for="group in facultyGroups" :key="group.program" class="faculty-program-group">
+        <h3>{{ group.program }}</h3>
+        <div class="people-grid">
+          <article v-for="person in group.people" :key="person.name" class="person-card" tabindex="0">
+            <div class="person-photo">
+              <img :src="`/ccs-home/faculty/${person.image}`" :alt="person.name" loading="lazy" />
+              <div class="profile-caption">
+                <h3>{{ person.name }}</h3><p>{{ person.role }}</p>
+                <div class="profile-socials" aria-label="Social media">
+                  <span aria-label="Facebook">f</span><span class="twitter-icon" aria-label="Twitter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.932 4.932 0 0 0 2.163-2.723 9.99 9.99 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.944 13.944 0 0 1 1.64 3.162a4.916 4.916 0 0 0 1.523 6.557 4.9 4.9 0 0 1-2.229-.616v.062a4.918 4.918 0 0 0 3.946 4.817 4.936 4.936 0 0 1-2.224.084 4.926 4.926 0 0 0 4.6 3.42A9.876 9.876 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.01-7.503 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.59z" /></svg></span><span class="google-icon" aria-label="Google Plus">G+</span><span class="linkedin-icon" aria-label="LinkedIn">in</span>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
+        <p v-if="group.coordinatorOnly" class="faculty-assignment-note group-assignment-note">Only the program coordinator is identified for this program in the public CCS faculty listing.</p>
       </div>
     </section>
 
@@ -146,6 +158,11 @@ function scrollToTop() {
 .people-section-title p { margin-bottom:16px; }
 .people-section-title h2 { font-size:50px; }
 .people-grid { width:min(1532px,100%); margin:0 auto; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:27px; align-items:start; }
+.faculty-program-group { width:min(1532px,100%); margin:0 auto 52px; }
+.faculty-program-group > h3 { margin:0 0 22px; color:#194641; font:500 clamp(23px,2.5vw,32px)/1.25 'Roboto Slab',Georgia,serif; text-align:center; }
+.faculty-program-group .people-grid { grid-template-columns:repeat(auto-fit,minmax(220px,320px)); justify-content:center; }
+.faculty-assignment-note { max-width:880px; margin:-24px auto 40px; color:#687572; font-size:15px; line-height:1.65; text-align:center; }
+.group-assignment-note { margin:20px auto 0; }
 .person-card { min-width:0; background:#fff; outline:none; }
 .person-photo { position:relative; overflow:hidden; border-bottom:7px solid #ffa622; }
 .person-photo > img { display:block; width:100%; height:498px; object-fit:cover; object-position:center top; }

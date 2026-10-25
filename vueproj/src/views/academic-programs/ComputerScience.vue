@@ -1,12 +1,19 @@
 <script setup>
 import PageHeader from '../../PageHeader.vue'
+import ProgramCampusLife from './ProgramCampusLife.vue'
+import ProgramFaculty from './ProgramFaculty.vue'
 
 const objectives = [
-  'Exhibit skills, knowledge and leadership to excel in their information technology careers and related discipline.',
-  'Exhibit high standard of professionalism who are effective members of multi-discipline development teams.',
-  'Be involved in scholarly activities, research and outreach that contribute to the improvement and transformation of society.',
-  'Demonstrate ethical, professional, spiritual values, and social responsibility associated with their Information Technology careers and related professions.',
-  'Exhibit proficiency in the use of traditional and digital media arts, designing, developing and implementing digital media solutions in fields of entertainment and corporate environments.',
+  'Build a strong foundation in computing concepts, algorithms, and mathematical reasoning.',
+  'Design complex software and develop effective algorithms to solve computing problems.',
+  'Apply computer science theory and modern computing tools when evaluating computing solutions.',
+  'Communicate and collaborate effectively while practicing ethical responsibility and lifelong learning.',
+]
+
+const programFaculty = [
+  { name: 'Pedro Peter Rhys B. Cambronero, MSCS', role: 'BSCS Program', image: 'pedro-cambronero.jpg' },
+  { name: 'Ma. Sheila C. Sapul, Ph. D.', role: 'BSCS Program', image: 'sheila-sapul.jpg' },
+  { name: 'Marjee Rose B. Parreño, MSCS, MBA', role: 'Program Coordinator (BSCS, BSDMIA, and MSCS)', image: 'marjee-parreno.jpg' },
 ]
 
 const programOutcomes = [
@@ -62,7 +69,7 @@ function scrollToTop() {
       <PageHeader active-page="programs" />
       <div class="cs-hero-inner">
         <div class="cs-hero-copy">
-          <h1>Computer Science</h1>
+          <h1>Bachelor of Science in Computer Science (BSCS)</h1>
           <p>The Computer Science (CS) Program is designed for students who wants to study computing in depth.</p>
           <div class="cs-hero-actions">
             <a class="objectives-button" href="#objectives"><span aria-hidden="true">☰</span>Objectives</a>
@@ -73,10 +80,12 @@ function scrollToTop() {
       </div>
     </section>
 
+    <ProgramFaculty program-name="Computer Science" :people="programFaculty" />
+
     <section id="objectives" class="cs-section objectives-section">
-      <p class="section-kicker">Program Design</p>
-      <h2>Program Educational Objectives</h2>
-      <p class="section-subtext">These objectives describe the professional qualities and contributions the Computer Science program aims to develop.</p>
+      <p class="section-kicker"><span class="section-index">01</span> Program Design</p>
+      <h2>Program Objectives</h2>
+      <p class="section-subtext">A concise summary of the program focus and graduate competencies published by CCS.</p>
       <ol class="objectives-list">
         <li v-for="objective in objectives" :key="objective">{{ objective }}</li>
       </ol>
@@ -90,7 +99,7 @@ function scrollToTop() {
     </section>
 
     <section id="program-outcomes" class="cs-section program-outcomes-section">
-      <p class="section-kicker">Graduate Preparation</p>
+      <p class="section-kicker"><span class="section-index">02</span> Graduate Preparation</p>
       <h2>Program Outcomes</h2>
       <p class="section-subtext">These outcomes turn the program’s learning goals into practical knowledge, skills, and professional abilities.</p>
       <div class="outcome-copy">
@@ -108,7 +117,7 @@ function scrollToTop() {
     </section>
 
     <section id="curriculum-rationale" class="cs-section rationale-section">
-      <p class="section-kicker">Curriculum Foundations</p>
+      <p class="section-kicker"><span class="section-index">03</span> Curriculum Foundations</p>
       <h2 class="ched-heading">Curriculum Rationale</h2>
       <p class="section-subtext rationale-subtext">Based on CHED Memo Order No. 25, s. 2015 · Effective Academic Year 2018–2019</p>
       <div class="rationale-copy">
@@ -117,30 +126,31 @@ function scrollToTop() {
     </section>
 
     <section id="curriculum-description" class="cs-section curriculum-section">
-      <p class="section-kicker">What You Will Study</p>
+      <p class="section-kicker"><span class="section-index">04</span> What You Will Study</p>
       <h2>Curriculum Description:</h2>
       <p class="section-subtext">The curriculum brings together core computer science foundations, professional practice, and current areas of computing.</p>
-      <ul class="curriculum-list">
-        <li>The BSCS curriculum includes foundation and professional courses that cover theory, algorithms, software design and development, and new developments in computing.</li>
-        <li>The curriculum should include courses to cover Knowledge Areas recommended in ACM Computer Science Curricula 2013 (enumerated in PSG).</li>
-        <li>Defines eleven (11) Knowledge Areas:
-          <ul class="knowledge-list">
-            <li v-for="area in knowledgeAreas" :key="area">{{ area }}</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="campus-life" class="society-section">
-      <div class="society-shapes" aria-hidden="true"></div>
-      <div class="society-inner">
-        <img class="society-logo society-section-logo" src="/images/academic-programs/computer-science/computer-science-society.png" alt="Computer Science Society" />
-        <p>The Computer Science Society embraces its Mission to promote the Computer Science Course, to guide and prepare the students, to grow and strengthen the bonds of each member as one family, and to utilize the resources of the program to provide service to society and emphasize to students the need of lifelong learning, ethical conduct and an understanding of the diverse social context in which Computer Science is practiced. We furthermore seek to provide excellence in activities and outreaches to develop the community of all Computer Science Students to help and support its members to reach their goals in the ever advance, 21st century.</p>
+      <div class="curriculum-panel">
+        <ul class="curriculum-list">
+          <li>The BSCS curriculum includes foundation and professional courses that cover theory, algorithms, software design and development, and new developments in computing.</li>
+          <li>The curriculum should include courses to cover Knowledge Areas recommended in ACM Computer Science Curricula 2013 (enumerated in PSG).</li>
+          <li>Defines eleven (11) Knowledge Areas:
+            <ul class="knowledge-list">
+              <li v-for="area in knowledgeAreas" :key="area">{{ area }}</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </section>
 
+    <ProgramCampusLife
+      organization-name="Computer Science Society"
+      logo="/images/academic-programs/computer-science/computer-science-society.png"
+      logo-alt="Computer Science Society"
+      :paragraphs="['The Computer Science Society embraces its Mission to promote the Computer Science Course, to guide and prepare the students, to grow and strengthen the bonds of each member as one family, and to utilize the resources of the program to provide service to society and emphasize to students the need of lifelong learning, ethical conduct and an understanding of the diverse social context in which Computer Science is practiced. We furthermore seek to provide excellence in activities and outreaches to develop the community of all Computer Science Students to help and support its members to reach their goals in the ever advance, 21st century.']"
+    />
+
     <section id="graduate-outcomes" class="cs-section graduate-section">
-      <p class="section-kicker">Degree Competencies</p>
+      <p class="section-kicker"><span class="section-index">06</span> Degree Competencies</p>
       <h2>Bachelor of Science in Computer Science (BSCS)</h2>
       <p class="section-subtext">The outcomes below describe the knowledge and capabilities expected of Computer Science graduates.</p>
       <table class="graduate-table">
@@ -238,6 +248,9 @@ function scrollToTop() {
 .cs-section { width: min(1330px, calc(100% - 100px)); margin: 0 auto; scroll-margin-top: 110px; }
 .section-kicker { display:flex; align-items:center; justify-content:center; gap:12px; margin:0 0 12px; color:#bd8318; font-size:13px; font-weight:700; letter-spacing:.14em; text-align:center; text-transform:uppercase; }
 .section-kicker::before,.section-kicker::after { width:28px; height:1px; background:#e5a32a; content:''; }
+.section-index { display:inline-grid; width:32px; height:25px; place-items:center; border:1px solid #e5a32a80; border-radius:14px; color:#8c681d; font-size:10px; letter-spacing:.04em; }
+.program-outcomes-section,.rationale-section,.curriculum-section,.graduate-section { position:relative; border-top:1px solid #e6ebe8; }
+.program-outcomes-section::before,.rationale-section::before,.curriculum-section::before,.graduate-section::before { position:absolute; top:-1px; left:50%; width:54px; height:2px; background:#e99a00; content:''; transform:translateX(-50%); }
 .cs-section h2 { margin: 0 0 16px; color: #123f3b; font-size: 30px; font-weight: 500; text-align: center; text-transform: uppercase; }
 .cs-section .section-subtext { max-width:800px; margin:0 auto 46px; color:#687572; font-size:17px; line-height:1.65; text-align:center; }
 .objectives-section { position: relative; z-index: 2; padding: 80px 0 34px; }
@@ -266,7 +279,8 @@ function scrollToTop() {
 .curriculum-section { padding: 45px 0 80px; }
 .curriculum-section h2 { margin-bottom: 16px; }
 .curriculum-section .section-subtext { margin-bottom:36px; }
-.curriculum-list { max-width: 1050px; margin: 0 auto; padding-left: 25px; font-size: 17px; letter-spacing: .04em; line-height: 1.8; }
+.curriculum-panel { max-width:1050px; margin:0 auto; padding:30px 36px; border-left:4px solid #e99a00; border-radius:8px; background:#f5f8f6; }
+.curriculum-list { margin: 0 auto; padding-left: 25px; font-size: 17px; letter-spacing: .04em; line-height: 1.8; }
 .curriculum-list > li { margin-bottom: 8px; padding-left: 5px; }
 .knowledge-list { margin-top: 12px; padding-left: 46px; list-style-type: '–  '; }
 .knowledge-list li { padding-left: 6px; }
@@ -337,6 +351,7 @@ function scrollToTop() {
   .cs-section .rationale-subtext { margin-bottom:52px; }
   .rationale-copy h3,.curriculum-section h2 { font-size: 23px; }
   .rationale-copy p { font-size: 15px; line-height: 1.75; }
+  .curriculum-panel { padding:22px 20px; }
   .society-section { min-height: 730px; }
   .society-shapes { background: linear-gradient(165deg, transparent 0 30%, #e99a00 30.1% 72%, #153f3d 72.1% 100%); }
   .society-shapes::before { clip-path: polygon(0 29%, 56% 41%, 100% 20%, 100% 58%, 52% 75%, 0 63%); }
