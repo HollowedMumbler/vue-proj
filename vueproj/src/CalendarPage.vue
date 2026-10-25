@@ -75,13 +75,15 @@ function scrollToTop() {
 .calendar-toolbar h3 { margin:0; color:#111; font-size:28px; text-align:center; }
 .calendar-move,.calendar-views { display:flex; align-items:center; gap:7px; }
 .calendar-views { justify-content:flex-end; }
-.calendar-move button,.calendar-views button { min-width:50px; height:48px; padding:0 15px; border:0; border-radius:4px; background:#f7f7fa; color:#555; font-size:16px; cursor:pointer; }
+.calendar-move button,.calendar-views button { min-width:50px; height:48px; padding:0 15px; border:0; border-radius:4px; background:#f7f7fa; color:#555; font-size:16px; cursor:pointer; transition:background-color .18s ease,color .18s ease; }
+.calendar-move button:hover,.calendar-views button:hover,.calendar-move button:focus-visible,.calendar-views button:focus-visible { background:#6c3fc5; color:#fff; }
 .calendar-move button { font-size:25px; }
 .calendar-move .today-button { min-width:77px; margin-left:7px; font-size:15px; }
 .calendar-views button { display:flex; align-items:center; gap:8px; font-family:Georgia,serif; }
 .calendar-views button.selected { color:#173d3b; background:#ffa622; }
 .view-icon { color:#666; font-family:Arial,sans-serif; font-size:18px; font-weight:700; }
 .calendar-views button.selected .view-icon { color:#173d3b; }
+.calendar-views button:hover .view-icon,.calendar-views button:focus-visible .view-icon { color:#fff; }
 .calendar-grid { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); border-top:1px solid #d0d1d8; border-left:1px solid #d0d1d8; }
 .weekday { min-height:73px; display:grid; place-items:center; border-right:1px solid #d0d1d8; border-bottom:1px solid #d0d1d8; color:#555; font:700 21px Georgia,serif; }
 .calendar-cell { min-height:138px; padding:9px 10px; border-right:1px solid #d0d1d8; border-bottom:1px solid #d0d1d8; background:#fff; }
