@@ -94,7 +94,7 @@
 .placeholder-head { width: 96px; height: 96px; position: absolute; top: 78px; border-radius: 50%; background: #aab8b5; }
 .placeholder-shoulders { width: 230px; height: 150px; position: absolute; bottom: 36px; border-radius: 120px 120px 0 0; background: #aab8b5; }
 .history-photo-placeholder small { position: absolute; bottom: 12px; color: #61716c; font-size: 11px; letter-spacing: .04em; }
-.history-mark { width: 88px; height: 88px; padding: 5px; position: absolute; top: 14px; right: 14px; border-radius: 8px; background: #fff; object-fit: contain; box-shadow: 0 5px 15px #173e3a24; }
+.history-mark { width: 76px; height: 76px; padding: 8px; position: absolute; top: -34px; right: 14px; border: 1px solid #e6eae7; border-radius: 50%; background: #fff; object-fit: contain; box-shadow: 0 6px 18px #173e3a1c; }
 .history-visual figcaption { margin-top: 11px; color: #53635c; font-size: 13px; font-weight: 600; text-align: right; }
 .section-label { margin: 0 0 12px; color: var(--ccs-text); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
 .history-copy h2 { margin: 0 0 20px; color: var(--ccs-gold); font-size: clamp(42px, 4.4vw, 54px); font-style: italic; font-weight: 700; line-height: 1.05; }
@@ -240,7 +240,7 @@
   .history-photo-placeholder { height: 320px; }
   .placeholder-head { width: 78px; height: 78px; top: 62px; }
   .placeholder-shoulders { width: 200px; height: 128px; bottom: 34px; }
-  .history-mark { width: 70px; height: 70px; top: 10px; right: 10px; }
+  .history-mark { width: 64px; height: 64px; top: -27px; right: 12px; }
   .history-copy h2 { font-size: 38px; }
   .history-text { padding: 18px; }
   .history-text p { font-size: 12px; }
