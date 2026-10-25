@@ -90,7 +90,10 @@
 }
 .history-copy { width: 100%; max-width: 520px; justify-self: start; position: relative; z-index: 1; }
 .history-visual { width: min(100%, 400px); margin: 0 auto; position: relative; }
-.history-photo { width: 100%; height: 390px; display: block; border-radius: 12px; object-fit: cover; object-position: center 35%; box-shadow: 0 16px 34px #173e3a1f; }
+.history-photo-placeholder { width: 100%; height: 390px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-radius: 12px; background: linear-gradient(145deg, #f0f3f2, #dce5e3); box-shadow: 0 16px 34px #173e3a1f; }
+.placeholder-head { width: 96px; height: 96px; position: absolute; top: 78px; border-radius: 50%; background: #aab8b5; }
+.placeholder-shoulders { width: 230px; height: 150px; position: absolute; bottom: 36px; border-radius: 120px 120px 0 0; background: #aab8b5; }
+.history-photo-placeholder small { position: absolute; bottom: 12px; color: #61716c; font-size: 11px; letter-spacing: .04em; }
 .history-mark { width: 88px; height: 88px; padding: 5px; position: absolute; top: 14px; right: 14px; border-radius: 8px; background: #fff; object-fit: contain; box-shadow: 0 5px 15px #173e3a24; }
 .history-visual figcaption { margin-top: 11px; color: #53635c; font-size: 13px; font-weight: 600; text-align: right; }
 .section-label { margin: 0 0 12px; color: var(--ccs-text); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
@@ -234,7 +237,9 @@
   .ccs-history { min-height: 0; padding: 65px 22px; grid-template-columns: 1fr; gap: 34px; clip-path: polygon(0 0, 45% 0, 50% 4%, 55% 0, 100% 0, 100% 96%, 55% 96%, 50% 100%, 45% 96%, 0 96%); }
   .history-copy { max-width: 470px; justify-self: center; }
   .history-visual { width: min(100%, 320px); }
-  .history-photo { height: 320px; }
+  .history-photo-placeholder { height: 320px; }
+  .placeholder-head { width: 78px; height: 78px; top: 62px; }
+  .placeholder-shoulders { width: 200px; height: 128px; bottom: 34px; }
   .history-mark { width: 70px; height: 70px; top: 10px; right: 10px; }
   .history-copy h2 { font-size: 38px; }
   .history-text { padding: 18px; }
