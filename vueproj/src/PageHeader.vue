@@ -21,6 +21,10 @@ function navigate(page) {
     'about#linkages': '/linkages', 'home#news': '/news-and-updates',
     'home#programs': '/#programs', faculty: '/faculty-and-staff',
     calendar: '/event-calendar', 'home#contact': '/contact-us',
+    'computer-science': '/computer-science', 'information-technology': '/information-technology',
+    'information-systems': '/information-systems',
+    'digital-media-and-interactive-arts': '/digital-media-and-interactive-arts',
+    'library-information-science': '/library-information-science',
   }
   router.push(paths[page] || '/')
 }
@@ -36,7 +40,8 @@ onUnmounted(() => window.removeEventListener('scroll', updateScroll))
   <header class="page-site-header" :class="{ 'is-scrolled': scrolled }">
     <div class="page-header-inner">
       <button class="page-brand" type="button" aria-label="Home" @click="navigate('home')">
-        <span class="page-brand-name">CCS<br />CPU</span>
+        <img class="brand-top" src="/images/ccs/cropped-CCS-Logov-new.png" alt="" />
+        <img class="brand-scrolled" src="/images/ccs/Warriors-Logo-2.png" alt="" />
       </button>
       <button
         class="page-menu-toggle"
@@ -64,11 +69,11 @@ onUnmounted(() => window.removeEventListener('scroll', updateScroll))
         <div class="page-nav-group">
           <button @click="navigate('home#programs')">Academic Programs <i></i></button>
           <div class="page-dropdown">
-            <button @click="navigate('home#programs')">Computer Science</button>
-            <button @click="navigate('home#programs')">Information Technology</button>
-            <button @click="navigate('home#programs')">Information Systems</button>
-            <button @click="navigate('home#programs')">Digital Media and Interactive Arts</button>
-            <button @click="navigate('home#programs')">Library Information Science</button>
+            <button @click="navigate('computer-science')">Computer Science</button>
+            <button @click="navigate('information-technology')">Information Technology</button>
+            <button @click="navigate('information-systems')">Information Systems</button>
+            <button @click="navigate('digital-media-and-interactive-arts')">Digital Media and Interactive Arts</button>
+            <button @click="navigate('library-information-science')">Library Information Science</button>
           </div>
         </div>
         <button :class="{ active: activePage === 'faculty' }" @click="navigate('faculty')">Faculty and Staff</button>
@@ -80,34 +85,40 @@ onUnmounted(() => window.removeEventListener('scroll', updateScroll))
 </template>
 
 <style>
-.page-site-header { position:absolute; z-index:50; inset:0 0 auto; height:124px; color:#fff; transition:background .2s,color .2s,box-shadow .2s; }
+.page-site-header { position:absolute; z-index:50; inset:0 0 auto; height:92px; color:#fff; transition:background .2s,color .2s,box-shadow .2s; }
 .page-site-header.is-scrolled { position:fixed; background:#fff; color:#333; box-shadow:0 5px 22px #0000000b; }
-.page-header-inner { width:min(1860px,calc(100% - 9.2%)); height:100%; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:30px; }
-.page-brand { position:relative; display:grid; place-items:center; flex:none; width:118px; height:100px; padding:0; border:0; background:transparent; cursor:pointer; }
-.page-brand-name { font:700 25px/1 Arial,sans-serif; letter-spacing:.08em; color:inherit; text-align:center; }
-.page-brand img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
-.page-nav { display:flex; align-items:center; justify-content:flex-end; gap:clamp(20px,2.1vw,44px); height:100%; }
-.page-nav button { padding:0; border:0; color:inherit; background:transparent; font:600 clamp(15px,1.13vw,23px) Roboto,Arial,sans-serif; white-space:nowrap; cursor:pointer; }
+.page-header-inner { width:min(1360px,calc(100% - 9.2%)); height:100%; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.page-brand { position:relative; display:grid; place-items:center; flex:none; width:96px; height:76px; padding:0; border:0; background:transparent; cursor:pointer; }
+.page-brand img { position:absolute; top:50%; left:50%; object-fit:contain; transform:translate(-50%,-50%); }
+.page-brand .brand-top { width:70px; height:70px; }
+.page-brand .brand-scrolled { display:none; }
+.page-brand .brand-scrolled { width:96px; height:76px; }
+.page-site-header.is-scrolled .page-brand .brand-top { display:none; }
+.page-site-header.is-scrolled .page-brand .brand-scrolled { display:block; }
+.page-nav { display:flex; align-items:center; justify-content:flex-end; gap:clamp(18px,2vw,36px); height:100%; }
+.page-nav button { padding:0; border:0; color:inherit; background:transparent; font:500 16px Arial,sans-serif; white-space:nowrap; cursor:pointer; }
 .page-nav > button,.page-nav-group > button { height:100%; }
 .page-nav button:hover,.page-nav button.active { color:#ffa622; }
 .page-nav-group { position:relative; height:100%; }
 .page-nav-group > button { display:flex; align-items:center; gap:8px; }
 .page-nav-group i { width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid currentColor; }
-.page-dropdown { display:none; position:absolute; top:95px; left:-18px; min-width:230px; padding:7px 0; background:#fff; color:#303836; box-shadow:0 8px 22px #0002; }
+.page-dropdown { display:none; position:absolute; top:100%; left:-18px; min-width:230px; padding:7px 0; background:#fff; color:#303836; box-shadow:0 8px 22px #0002; }
 .page-dropdown button { display:block; width:100%; padding:12px 18px; color:#303836; font-size:15px; font-weight:500; text-align:left; }
 .page-dropdown button:hover { color:#e99a10; background:#f6f6f6; }
 .page-nav-group:hover .page-dropdown,.page-nav-group:focus-within .page-dropdown { display:block; }
 .page-menu-toggle { display:none; }
-@media(max-width:1200px) {
+@media(max-width:1100px) {
   .page-header-inner { width:calc(100% - 52px); }
-  .page-nav { gap:17px; }
-  .page-nav button { font-size:15px; }
-  .page-brand { width:88px; height:82px; }
+  .page-nav { gap:16px; }
+  .page-nav button { font-size:13px; }
+  .page-brand { width:88px; height:76px; }
 }
 @media(max-width:850px) {
   .page-site-header,.page-site-header.is-scrolled { height:84px; }
   .page-header-inner { width:calc(100% - 36px); gap:12px; }
   .page-brand { width:70px; height:70px; }
+  .page-brand .brand-top { width:60px; height:60px; }
+  .page-brand .brand-scrolled { width:70px; height:60px; }
   .page-menu-toggle { display:flex; width:42px;height:42px;margin-left:auto;padding:9px;flex-direction:column;justify-content:space-around;border:0;background:transparent;color:inherit; }
   .page-menu-toggle span { display:block;width:24px;height:2px;background:currentColor; }
   .page-nav { display:none; position:absolute; top:84px; left:0; right:0; height:auto; padding:8px 22px 20px; flex-direction:column; align-items:stretch; gap:0; background:#fff; color:#333; box-shadow:0 10px 20px #0002; }

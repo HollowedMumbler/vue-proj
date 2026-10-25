@@ -1,14 +1,10 @@
 <script setup>
-import PageBanner from '../../PageBanner.vue'
+import AboutPageBanner from './AboutPageBanner.vue'
 </script>
 
 <template>
   <main class="vision-mission-page">
-    <PageBanner
-      kicker="College of Computer Studies · Central Philippine University"
-      title="Vision and Mission"
-      active-page="about"
-    />
+    <AboutPageBanner title="Vision and Mission" />
 
     <section class="vision-boxes" aria-label="College statements">
       <article class="vision-box">
@@ -63,53 +59,6 @@ import PageBanner from '../../PageBanner.vue'
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.vision-mission-page :deep(.page-banner) {
-  min-height: 390px;
-  background-image:
-    linear-gradient(112deg, #a8781dc9 0%, #6c713bbd 45%, #143e3bc4 100%),
-    url('/ccs-home/MT.jpg');
-  background-position: center, center 72%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.vision-mission-page :deep(.page-banner-title) {
-  padding: 150px 22px 115px;
-  position: relative;
-  z-index: 1;
-}
-
-.vision-mission-page :deep(.page-banner-title p) {
-  display: none;
-}
-
-.vision-mission-page :deep(.page-banner-title h1) {
-  color: #fff;
-  font-size: clamp(44px, 4.2vw, 62px);
-  font-weight: 600;
-}
-
-.vision-mission-page :deep(.page-banner-title h1::after) {
-  width: 56px;
-  height: 3px;
-  margin: 24px auto 0;
-  display: block;
-  background: #fff;
-  content: '';
-}
-
-.vision-mission-page :deep(.page-banner)::after {
-  height: 150px;
-  position: absolute;
-  right: -8%;
-  bottom: -94px;
-  left: -8%;
-  border-radius: 50% 50% 0 0 / 65% 65% 0 0;
-  background: #fff;
-  content: '';
-  transform: rotate(-3deg);
-}
-
 .vision-boxes {
   width: min(1200px, calc(100% - 44px));
   margin: -75px auto 0;
@@ -124,11 +73,14 @@ import PageBanner from '../../PageBanner.vue'
 
 .vision-box {
   padding: 30px 26px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: 1px solid #d6d6d1;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 15px 34px #18251e24;
-  text-align: center;
+  text-align: left;
 }
 
 .vision-box h2 {
@@ -136,6 +88,7 @@ import PageBanner from '../../PageBanner.vue'
   color: #f5a018;
   font-size: 24px;
   font-weight: 600;
+  text-align: center;
 }
 
 .vision-box p {
@@ -179,14 +132,6 @@ import PageBanner from '../../PageBanner.vue'
 }
 
 @media (max-width: 700px) {
-  .vision-mission-page :deep(.page-banner) {
-    min-height: 340px;
-  }
-
-  .vision-mission-page :deep(.page-banner-title) {
-    padding-top: 138px;
-  }
-
   .vision-boxes {
     width: min(520px, calc(100% - 36px));
     margin-top: -56px;

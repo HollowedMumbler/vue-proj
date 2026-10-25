@@ -1,69 +1,10 @@
+<script setup>
+import PageHeader from '../../PageHeader.vue'
+</script>
+
 <template>
   <div class="ccs-home" id="home">
-    <!-- Main navigation -->
-    <header class="ccs-header">
-      <a class="ccs-brand" href="#home" aria-label="College of Computer Studies home">
-        <img class="brand-top" src="/images/ccs/cropped-CCS-Logov-new.png" alt="CCS" />
-        <img class="brand-scrolled" src="/images/ccs/Warriors-Logo-2.png" alt="CPU Warriors" />
-      </a>
-
-      <details class="ccs-mobile-menu">
-        <summary aria-label="Open navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </summary>
-        <nav>
-          <a href="#home">Home</a>
-          <details>
-            <summary>About Us</summary>
-            <a href="/history">History</a>
-            <a href="/vision-and-mission">Vision and Mission</a>
-            <a href="/dean-message">Message of the Dean</a>
-            <a href="/linkages">Linkages</a>
-            <a href="/news-and-updates">News and Updates</a>
-          </details>
-          <details>
-            <summary>Academic Programs</summary>
-            <a href="/computer-science">Computer Science</a>
-            <a href="/information-technology">Information Technology</a>
-            <a href="/information-systems">Information Systems</a>
-            <a href="/digital-media-and-interactive-arts">Digital Media and Interactive Arts</a>
-            <a href="/library-information-science">Library Information Science</a>
-          </details>
-          <a href="/faculty-and-staff">Faculty and Staff</a>
-          <a href="/event-calendar">Event Calendar</a>
-          <a href="/contact-us">Contact Us</a>
-        </nav>
-      </details>
-
-      <nav class="ccs-nav" aria-label="Primary navigation">
-        <a class="active" href="#home">Home</a>
-        <div class="nav-group">
-          <a href="#about">About Us <span>⌄</span></a>
-          <div class="nav-dropdown">
-            <a href="/history">History</a>
-            <a href="/vision-and-mission">Vision and Mission</a>
-            <a href="/dean-message">Message of the Dean</a>
-            <a href="/linkages">Linkages</a>
-            <a href="/news-and-updates">News and Updates</a>
-          </div>
-        </div>
-        <div class="nav-group">
-          <a href="#programs">Academic Programs <span>⌄</span></a>
-          <div class="nav-dropdown">
-            <a href="/computer-science">Computer Science</a>
-            <a href="/information-technology">Information Technology</a>
-            <a href="/information-systems">Information Systems</a>
-            <a href="/digital-media-and-interactive-arts">Digital Media and Interactive Arts</a>
-            <a href="/library-information-science">Library Information Science</a>
-          </div>
-        </div>
-        <a href="/faculty-and-staff">Faculty and Staff</a>
-        <a href="/event-calendar">Event Calendar</a>
-        <a href="/contact-us">Contact Us</a>
-      </nav>
-    </header>
+    <PageHeader active-page="home" />
 
     <main>
       <!-- Hero and core practices -->
@@ -327,5 +268,4 @@
   </div>
 </template>
 
-<script src="../../scripts/home-header.js"></script>
 <style src="../../styles/home.css"></style>

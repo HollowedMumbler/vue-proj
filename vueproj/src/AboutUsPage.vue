@@ -1,5 +1,5 @@
 <script setup>
-import PageBanner from './PageBanner.vue'
+import AboutPageBanner from './views/about-us/AboutPageBanner.vue'
 
 defineEmits(['navigate'])
 
@@ -17,7 +17,7 @@ const partners = [
 
 <template>
   <main class="about-page">
-    <PageBanner kicker="Academically Knowledgeable and Here For You" title="About Us" active-page="about" @navigate="$emit('navigate', $event)" />
+    <AboutPageBanner title="About Us" />
 
     <section id="about" class="about-intro">
       <div>
@@ -31,19 +31,21 @@ const partners = [
       <div class="vision-copy">
         <p class="about-kicker">OUR FOUNDATION</p>
         <h2>Vision and Mission</h2>
-        <article>
-          <h3>Vision</h3>
-          <p>The College of Computer Studies is founded on the vision of academic excellence in Information Technology Education and responsive to the needs of the total person and the world.</p>
-        </article>
-        <article>
-          <h3>Mission</h3>
-          <p>A College of the future with a mission to educate students with the Christian principles and practices of computer studies, preparing them to advance studies, careers in software development, computing systems technology, information management, and for a lifetime learning.</p>
-        </article>
-        <article>
-          <h3>Quality Policy</h3>
-          <p>To fulfill the mission and realize the vision of Central Philippine University, we commit to consistently provide superior quality services by integrating Christian values, academic excellence, highest level of professionalism, and quality consideration in every aspect of our operations.</p>
-          <p>We maintain a quality management system that complies with international quality standards. We continually improve to achieve global excellence that satisfies the expectations of the university community, partner institutions, and the general public.</p>
-        </article>
+        <div class="vision-statement-grid">
+          <article>
+            <h3>Vision</h3>
+            <p>The College of Computer Studies is founded on the vision of academic excellence in Information Technology Education and responsiveness to the needs of the total person and the world.</p>
+          </article>
+          <article>
+            <h3>Mission</h3>
+            <p>A college of the future that educates students through the Christian principles and practices of computer studies and prepares them for advanced study, careers in software development, computing systems technology, and information management, and lifelong learning.</p>
+          </article>
+          <article>
+            <h3>Quality Policy</h3>
+            <p>To fulfill the mission and realize the vision of Central Philippine University, CCS commits to providing superior quality services by integrating Christian values, academic excellence, the highest level of professionalism, and quality considerations in every aspect of its operations.</p>
+            <p>The college maintains a quality management system that complies with international quality standards and continually improves to meet the expectations of the university community, partner institutions, and the general public.</p>
+          </article>
+        </div>
       </div>
       <img :src="'/ccs-home/history-ccs-mark.png'" alt="College of Computer Studies mark" />
     </section>
@@ -84,46 +86,337 @@ const partners = [
 </template>
 
 <style scoped>
-.about-page { min-height:100vh; color:#194641; background:#fff; font-family:Roboto,Arial,sans-serif; }
-.about-intro { width:min(1528px,calc(100% - 80px)); min-height:390px; margin:0 auto; padding:124px 0; display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center; }
-.about-kicker { margin:0 0 17px; color:#888; font-size:15px; font-weight:600; letter-spacing:.1em; }
-.about-intro h2,.vision-copy h2,.about-history h2,.dean-message h2,.linkages-section h2 { margin:0; color:#194641; font:400 clamp(42px,4vw,68px)/1.08 'Roboto Slab',Georgia,serif; }
-.about-intro > div h2 { color:#194641; }
-.about-lead { margin:0; padding-left:27px; border-left:4px solid #ffa622; color:#858585; font-size:21px; line-height:1.8; }
-.vision-section { position:relative; min-height:650px; padding:95px max(40px,calc((100% - 1300px)/2)); overflow:hidden; background:#f5f6f3; }
-.vision-copy { position:relative; z-index:1; max-width:850px; }
-.vision-copy h2 { margin-bottom:38px; }
-.vision-copy article { margin:0 0 26px; }
-.vision-copy h3 { margin:0 0 8px; color:#ffa622; font-size:22px; }
-.vision-copy article p { margin:0 0 10px; color:#777; font-size:16px; line-height:1.8; }
-.vision-section > img { position:absolute; right:max(4%,calc((100% - 1660px)/2)); top:50%; width:min(360px,28vw); transform:translateY(-50%); opacity:.08; }
-.about-history { padding:88px 24px; color:#fff; background:#143d39; }
-.about-history-inner { width:min(1270px,100%); margin:0 auto; display:grid; grid-template-columns:.8fr 1.4fr auto; gap:45px; align-items:center; }
-.about-history h2 { color:#ffa622; }
-.about-history-inner > p { margin:0; color:#d0d7d4; font-size:17px; line-height:1.8; }
-.about-link { border:0; padding:13px 18px; color:#163e3b; background:#ffa622; font-size:14px; font-weight:700; white-space:nowrap; cursor:pointer; }
-.about-link span { margin-left:8px; }
-.dean-message { width:min(1200px,calc(100% - 60px)); margin:0 auto; padding:110px 0; display:grid; grid-template-columns:390px 1fr; gap:85px; align-items:center; }
-.dean-message > img { width:100%; height:450px; object-fit:cover; object-position:center top; border-bottom:7px solid #ffa622; }
-.dean-message h2 { margin-bottom:22px; color:#ffa622; }
-.dean-message > div > p:not(.about-kicker):not(.dean-name) { margin:0; padding-left:20px; border-left:4px solid #ffa622; color:#777; font-size:16px; line-height:1.9; }
-.dean-name { margin:28px 0 0; color:#ffa622; font-size:18px; font-style:italic; text-align:right; }
-.dean-name span { font-size:15px; }
-.linkages-section { padding:92px 24px 110px; text-align:center; background:#f8f8f7; }
-.linkages-section h2 { font-size:clamp(34px,3vw,52px); }
-.linkages-section > div:first-child > p:last-child { margin:10px 0 60px; color:#aaa; }
-.partner-grid { width:min(1050px,100%); margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:45px; align-items:center; }
-.partner-grid img { width:100%; height:145px; object-fit:contain; }
-.back-to-top { position:fixed; z-index:30; right:27px; bottom:25px; width:55px;height:55px;border:1px solid #e8e8e8;border-radius:50%;background:white;box-shadow:0 3px 12px #0002;color:#111;font-size:30px;line-height:1;cursor:pointer; }
-@media(max-width:850px) {
-  .about-intro { width:calc(100% - 40px); min-height:0; padding:78px 0; grid-template-columns:1fr; gap:28px; }
-  .about-lead { font-size:17px; }
-  .vision-section { padding:70px 25px; }
-  .vision-section > img { right:-80px; top:20%; width:300px; }
-  .about-history-inner { grid-template-columns:1fr; gap:22px; }
-  .about-link { width:max-content; }
-  .dean-message { width:calc(100% - 40px); padding:75px 0; grid-template-columns:1fr; gap:35px; }
-  .dean-message > img { max-width:420px; height:440px; margin:0 auto; }
-  .partner-grid { grid-template-columns:repeat(2,1fr); gap:28px; }
+.about-page {
+  --about-green: #143e3b;
+  --about-gold: #ffad1f;
+  min-height: 100vh;
+  color: #34423b;
+  background: #fff;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.about-intro {
+  width: min(1200px, calc(100% - 44px));
+  min-height: 255px;
+  margin: -75px auto 68px;
+  padding: 36px 42px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 52px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  border: 1px solid #d6d6d1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 15px 34px #18251e24;
+}
+
+.about-kicker {
+  margin: 0 0 13px;
+  color: #74887a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+
+.about-intro h2,
+.vision-copy h2,
+.about-history h2,
+.dean-message h2,
+.linkages-section h2 {
+  margin: 0;
+  color: var(--about-green);
+  font: 500 clamp(32px, 3.4vw, 46px)/1.15 'Roboto Slab', Georgia, serif;
+}
+
+.about-lead {
+  margin: 0;
+  padding-left: 22px;
+  border-left: 3px solid var(--about-gold);
+  color: #65716c;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.vision-section {
+  position: relative;
+  padding: 76px max(22px, calc((100% - 1200px) / 2));
+  overflow: hidden;
+  background: #f3f6f1;
+}
+
+.vision-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.vision-copy h2 {
+  margin-bottom: 30px;
+}
+
+.vision-statement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.vision-statement-grid article {
+  min-height: 260px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #d6d6d1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 24px #18251e12;
+}
+
+.vision-copy h3 {
+  margin: 0 0 14px;
+  color: #f5a018;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.vision-copy article p {
+  margin: 0 0 10px;
+  color: #65716c;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.vision-section > img {
+  position: absolute;
+  right: max(4%, calc((100% - 1660px) / 2));
+  top: 50%;
+  width: min(360px, 28vw);
+  transform: translateY(-50%);
+  opacity: .06;
+}
+
+.about-history {
+  padding: 76px 24px;
+  color: #fff;
+  background: var(--about-green);
+}
+
+.about-history-inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .8fr 1.4fr auto;
+  gap: 38px;
+  align-items: center;
+}
+
+.about-history h2 {
+  color: var(--about-gold);
+}
+
+.about-history-inner > p {
+  margin: 0;
+  color: #d0d7d4;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about-link {
+  border: 0;
+  border-radius: 4px;
+  padding: 13px 18px;
+  color: #163e3b;
+  background: var(--about-gold);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.about-link span {
+  margin-left: 8px;
+}
+
+.dean-message {
+  width: min(1200px, calc(100% - 44px));
+  margin: 72px auto;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 52px;
+  align-items: center;
+  border: 1px solid #d6d6d1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 15px 34px #18251e1b;
+}
+
+.dean-message > img {
+  width: 100%;
+  height: 360px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.dean-message h2 {
+  margin-bottom: 20px;
+  color: #f5a018;
+}
+
+.dean-message > div > p:not(.about-kicker):not(.dean-name) {
+  margin: 0;
+  padding-left: 18px;
+  border-left: 3px solid var(--about-gold);
+  color: #65716c;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.dean-name {
+  margin: 24px 0 0;
+  color: var(--about-green);
+  font-size: 16px;
+  font-style: italic;
+  text-align: left;
+}
+
+.dean-name span {
+  font-size: 14px;
+}
+
+.linkages-section {
+  padding: 76px 24px 90px;
+  text-align: center;
+  background: #f3f6f1;
+}
+
+.linkages-section h2 {
+  font-size: clamp(32px, 3vw, 44px);
+}
+
+.linkages-section > div:first-child > p:last-child {
+  margin: 10px 0 42px;
+  color: #78827f;
+}
+
+.partner-grid {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.partner-grid img {
+  width: 100%;
+  height: 145px;
+  padding: 18px;
+  border: 1px solid #e3e8e1;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 22px #061a1a12;
+  object-fit: contain;
+}
+
+.back-to-top {
+  position: fixed;
+  z-index: 30;
+  right: 27px;
+  bottom: 25px;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 3px 12px #0002;
+  color: #111;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .vision-statement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vision-statement-grid article:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .about-history-inner {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  .about-link {
+    grid-column: 2;
+    width: max-content;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-intro {
+    width: calc(100% - 36px);
+    min-height: 0;
+    margin-top: -56px;
+    padding: 28px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-lead {
+    font-size: 15px;
+  }
+
+  .vision-section {
+    padding: 58px 20px;
+  }
+
+  .vision-statement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-statement-grid article:last-child {
+    grid-column: auto;
+  }
+
+  .vision-section > img {
+    right: -80px;
+    top: 20%;
+    width: 240px;
+  }
+
+  .about-history-inner {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-link {
+    grid-column: auto;
+  }
+
+  .dean-message {
+    width: calc(100% - 36px);
+    margin: 48px auto;
+    padding: 24px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .dean-message > img {
+    max-width: 360px;
+    height: 380px;
+    margin: 0 auto;
+  }
+
+  .partner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
 }
 </style>

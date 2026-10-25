@@ -1,5 +1,5 @@
 <script setup>
-import PageBanner from '../../PageBanner.vue'
+import AboutPageBanner from './AboutPageBanner.vue'
 
 const milestones = [
   {
@@ -58,15 +58,12 @@ const milestones = [
     text: 'Following a PAASCU re-survey in September, BSCS, BSIT, and BSIS received five-year Level 1 reaccredited status. BLIS began its PACUCOA accreditation process with an orientation in October.',
   },
 ]
+
 </script>
 
 <template>
   <main class="history-page">
-    <PageBanner
-      kicker="Remember · Connect · Engage · Build · Share"
-      title="College History"
-      active-page="about"
-    />
+    <AboutPageBanner title="College History" />
 
     <section class="history-story">
       <div class="history-story-copy">
@@ -127,12 +124,18 @@ const milestones = [
 
 .history-story {
   width: min(1140px, calc(100% - 44px));
-  margin: 0 auto;
-  padding: 82px 0;
+  margin: -75px auto 0;
+  padding: 32px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   align-items: center;
   gap: clamp(40px, 8vw, 110px);
+  position: relative;
+  z-index: 2;
+  border: 1px solid #d6d6d1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 15px 34px #18251e24;
 }
 
 .history-eyebrow {
@@ -230,7 +233,7 @@ const milestones = [
   margin: 0 0 22px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr);
-  align-items: start;
+  align-items: center;
   position: relative;
 }
 
@@ -277,7 +280,7 @@ const milestones = [
 .history-timeline-dot {
   width: 16px;
   height: 16px;
-  margin: 20px auto 0;
+  margin: 0 auto;
   grid-column: 2;
   grid-row: 1;
   z-index: 1;
@@ -308,7 +311,8 @@ const milestones = [
 
 @media (max-width: 760px) {
   .history-story {
-    padding: 58px 0;
+    margin-top: -56px;
+    padding: 26px;
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -348,7 +352,7 @@ const milestones = [
   }
 
   .history-timeline-dot {
-    margin: 20px 0 0;
+    margin: 0 auto;
     grid-column: 1;
   }
 }
