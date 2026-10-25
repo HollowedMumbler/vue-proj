@@ -1,59 +1,164 @@
 <template>
   <div class="ccs-home" id="home">
+    <!-- Main navigation -->
     <header class="ccs-header">
-      <a class="ccs-brand" href="#home">
-        <span><strong>College of Computer Studies</strong><small>Central Philippine University</small></span>
+      <a class="ccs-brand" href="#home" aria-label="College of Computer Studies home">
+        <img class="brand-top" src="/images/ccs/cropped-CCS-Logov-new.png" alt="CCS" />
+        <img class="brand-scrolled" src="/images/ccs/Warriors-Logo-2.png" alt="CPU Warriors" />
       </a>
-      <details class="ccs-mobile-nav">
-        <summary aria-label="Open menu"><span></span><span></span><span></span></summary>
-        <nav aria-label="Mobile menu">
+
+      <details class="ccs-mobile-menu">
+        <summary aria-label="Open navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </summary>
+        <nav>
           <a href="#home">Home</a>
-          <details><summary>About Us</summary><a href="/history">History</a><a href="/vision-and-mission">Vision and Mission</a><a href="/dean-message">Message of the Dean</a><a href="/linkages">Linkages</a><a href="/news-and-updates">News and Updates</a></details>
-          <details><summary>Academic Programs</summary><a href="/computer-science">Computer Science</a><a href="/information-technology">Information Technology</a><a href="/information-systems">Information Systems</a><a href="/digital-media-and-interactive-arts">Digital Media and Interactive Arts</a><a href="/library-information-science">Library Information Science</a></details>
-          <a href="/faculty-and-staff">Faculty and Staff</a><a href="/event-calendar">Event Calendar</a><a href="/contact-us">Contact Us</a>
+          <details>
+            <summary>About Us</summary>
+            <a href="/history">History</a>
+            <a href="/vision-and-mission">Vision and Mission</a>
+            <a href="/dean-message">Message of the Dean</a>
+            <a href="/linkages">Linkages</a>
+            <a href="/news-and-updates">News and Updates</a>
+          </details>
+          <details>
+            <summary>Academic Programs</summary>
+            <a href="/computer-science">Computer Science</a>
+            <a href="/information-technology">Information Technology</a>
+            <a href="/information-systems">Information Systems</a>
+            <a href="/digital-media-and-interactive-arts">Digital Media and Interactive Arts</a>
+            <a href="/library-information-science">Library Information Science</a>
+          </details>
+          <a href="/faculty-and-staff">Faculty and Staff</a>
+          <a href="/event-calendar">Event Calendar</a>
+          <a href="/contact-us">Contact Us</a>
         </nav>
       </details>
+
       <nav class="ccs-nav" aria-label="Primary navigation">
-        <a class="ccs-nav-link current" href="#home">Home</a>
-        <div class="ccs-nav-group"><a class="ccs-nav-link" href="#about">About Us <span>⌄</span></a><div class="ccs-dropdown"><a href="/history">History</a><a href="/vision-and-mission">Vision and Mission</a><a href="/dean-message">Message of the Dean</a><a href="/linkages">Linkages</a><a href="/news-and-updates">News and Updates</a></div></div>
-        <div class="ccs-nav-group"><a class="ccs-nav-link" href="#programs">Academic Programs <span>⌄</span></a><div class="ccs-dropdown"><a href="/computer-science">Computer Science</a><a href="/information-technology">Information Technology</a><a href="/information-systems">Information Systems</a><a href="/digital-media-and-interactive-arts">Digital Media and Interactive Arts</a><a href="/library-information-science">Library Information Science</a></div></div>
-        <a class="ccs-nav-link" href="/faculty-and-staff">Faculty and Staff</a>
-        <a class="ccs-nav-link" href="/event-calendar">Event Calendar</a>
-        <a class="ccs-nav-contact" href="/contact-us">Contact Us <span>↗</span></a>
+        <a class="active" href="#home">Home</a>
+        <div class="nav-group">
+          <a href="#about">About Us <span>⌄</span></a>
+          <div class="nav-dropdown">
+            <a href="/history">History</a>
+            <a href="/vision-and-mission">Vision and Mission</a>
+            <a href="/dean-message">Message of the Dean</a>
+            <a href="/linkages">Linkages</a>
+            <a href="/news-and-updates">News and Updates</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <a href="#programs">Academic Programs <span>⌄</span></a>
+          <div class="nav-dropdown">
+            <a href="/computer-science">Computer Science</a>
+            <a href="/information-technology">Information Technology</a>
+            <a href="/information-systems">Information Systems</a>
+            <a href="/digital-media-and-interactive-arts">Digital Media and Interactive Arts</a>
+            <a href="/library-information-science">Library Information Science</a>
+          </div>
+        </div>
+        <a href="/faculty-and-staff">Faculty and Staff</a>
+        <a href="/event-calendar">Event Calendar</a>
+        <a href="/contact-us">Contact Us</a>
       </nav>
     </header>
 
     <main>
-      <section class="ccs-hero">
-        <div class="ccs-hero-copy">
-          <p class="ccs-overline">The CCS core practices that build bridges between gaps</p>
-          <h1>different <span>PEOPLE,</span><br /><span>ONE</span> goal</h1>
-          <a class="ccs-hero-button" href="#programs">Your FUTURE begins HERE <span>↗</span></a>
+      <!-- Hero and core practices -->
+      <section class="ccs-hero" aria-label="College of Computer Studies">
+        <div class="hero-copy">
+          <p>the CCS core practices that build bridges between gaps</p>
+          <h1>
+            REMEMBER<br />
+            CONNECT<br />
+            ENGAGE<br />
+            BUILD<br />
+            SHARE
+          </h1>
+          <h2>different PEOPLE, ONE goal</h2>
+          <a class="gold-button" href="#programs">Your FUTURE begins HERE</a>
         </div>
-        <div class="ccs-hero-practices" aria-label="CCS core practices">
-          <span><b>01</b> REMEMBER</span><span><b>02</b> CONNECT</span><span><b>03</b> ENGAGE</span><span><b>04</b> BUILD</span><span><b>05</b> SHARE</span>
+
+      </section>
+
+      <!-- Program overview -->
+      <section class="ccs-programs" id="programs" aria-label="Academic programs">
+        <div class="programs-heading">
+          <p>ACADEMIC PROGRAMS</p>
+          <h2>Programs and Student Organizations</h2>
+        </div>
+        <div class="student-organizations" aria-label="Student organizations">
+          <a class="organization-tile" href="#program-cs">
+            <img src="/images/ccs/CSS_PNG-150x150.png" alt="" />
+          </a>
+          <a class="organization-tile" href="#program-it">
+            <img src="/images/ccs/1-150x150.png" alt="" />
+          </a>
+          <a class="organization-tile" href="#program-dmia">
+            <img src="/images/ccs/MIDAS_PNG-150x150.png" alt="" />
+          </a>
+          <a class="organization-tile" href="#program-blis">
+            <img src="/images/ccs/LISSO-150x150.png" alt="" />
+          </a>
+        </div>
+        <div class="program-card-grid">
+          <a class="program-card" id="program-cs" href="/computer-science">
+            <h2>Computer<br />Science</h2>
+            <p>The Computer Science (CS) program is designed for students who want to study computing in depth, including software and hardware.</p>
+          </a>
+          <a class="program-card" id="program-it" href="/information-technology">
+            <h2>Information<br />Technology</h2>
+            <p>The Information Technology (IT) program bridges computer science and management information systems.</p>
+          </a>
+          <a class="program-card" id="program-dmia" href="/digital-media-and-interactive-arts">
+            <h2>Digital Media and<br />Interactive Arts</h2>
+            <p>The degree focuses on creativity, applied arts, and digital media technologies.</p>
+          </a>
+          <a class="program-card" id="program-blis" href="/library-information-science">
+            <h2>Library Information<br />Science</h2>
+            <p>The Bachelor of Library and Information Science (BLIS) is a four-year program.</p>
+          </a>
         </div>
       </section>
 
-      <section class="ccs-programs" id="programs">
-        <div class="ccs-section-title"><p class="ccs-overline">Academic Programs</p><h2>Your future<br />begins here.</h2></div>
-        <div class="ccs-program-grid">
-          <a class="ccs-program-card" href="/computer-science"><h3>Computer Science</h3><p>Explore computing concepts and the software and hardware systems that put them into practice.</p><span class="ccs-read-more">Read more <b>↗</b></span></a>
-          <a class="ccs-program-card" href="/information-technology"><h3>Information Technology</h3><p>Learn to apply and manage computing technologies in response to organizational needs.</p><span class="ccs-read-more">Read more <b>↗</b></span></a>
-          <a class="ccs-program-card" href="/digital-media-and-interactive-arts"><h3>Digital Media and Interactive Arts</h3><p>Combine creative work, applied arts, and digital media technologies.</p><span class="ccs-read-more">Read more <b>↗</b></span></a>
-          <a class="ccs-program-card" href="/library-information-science"><h3>Library Information Science</h3><p>Prepare for work organizing information and supporting library and information services.</p><span class="ccs-read-more">Read more <b>↗</b></span></a>
+      <!-- College history preview -->
+      <section class="ccs-history" id="about">
+        <div class="history-copy">
+          <p class="section-label">REMEMBER</p>
+          <h2>HOW IT STARTED</h2>
+          <div class="history-text">
+            <p>The college began in 1995 with the birth of the Bachelor of Science in Computer Science (BSCS) program under the College of Commerce. The first batch of students was composed of two sections with about 100 students. Prof. Mary O’ T. Penetrante was appointed to be the faculty-in-charge of the new program.</p>
+          </div>
+          <a class="gold-button" href="/history">READ MORE</a>
+        </div>
+        <figure class="history-visual">
+          <div class="history-photo-placeholder" role="img" aria-label="Generic profile photo placeholder for Prof. Mary O’ T. Penetrante">
+            <span class="placeholder-head"></span>
+            <span class="placeholder-shoulders"></span>
+            <small>Photo placeholder</small>
+          </div>
+          <img class="history-mark" src="/images/ccs/cropped-CCS-Logov-new.png" alt="CCS logo" />
+          <figcaption>Prof. Mary O’ T. Penetrante</figcaption>
+        </figure>
+      </section>
+
+      <!-- Dean's message preview -->
+      <section class="ccs-dean" id="dean">
+        <div class="dean-photo">
+          <img src="/images/ccs/quijano-e1637132499305.png" alt="Ma. Christina A. Quijano, MSCS" />
+        </div>
+        <div class="dean-copy">
+          <p class="section-label">ENGAGE</p>
+          <h2>Message from the Dean</h2>
+          <p class="dean-message">Each academic year brings a new class and new contributions to college life. The Dean welcomes students and recognizes the unique strengths they bring to the CCS community.</p>
+          <p class="dean-name">Ma. Christina A. Quijano, MSCS<br /><span>Dean</span></p>
+          <a class="gold-button" href="/dean-message">READ MORE</a>
         </div>
       </section>
 
-      <section class="ccs-story" id="about">
-        <div class="ccs-story-photo"><span>REMEMBER</span><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/quijano-e1637132499305.png" alt="College of Computer Studies faculty member" /></div>
-        <div class="ccs-story-copy"><p class="ccs-overline">Remember</p><h2>How it<br />started</h2><p>CCS traces its beginnings to a Computer Science program established in 1995 under the College of Commerce. About 100 students joined the first cohort, with Prof. Mary O’ T. Penetrante leading the program.</p><a class="ccs-text-link" href="/history">Read more <span>↗</span></a></div>
-      </section>
-
-      <section class="ccs-dean">
-        <div class="ccs-dean-copy"><p class="ccs-overline">Engage · Message from the Dean</p><h2>Welcome to the<br />College of Computer Studies</h2><p class="ccs-dean-message">The Dean welcomes each incoming class and recognizes the different strengths students bring to academic life and the wider college community.</p><p class="ccs-dean-name">Ma. Christina A. Quijano, MSCS <span>Dean</span></p><a class="ccs-text-link" href="/dean-message">Read more <span>↗</span></a></div>
-      </section>
-
+      <!-- Recent news -->
       <section class="ccs-news" id="news">
         <div class="ccs-news-heading"><div><p class="ccs-overline">Be updated with the College and Student Events</p><h2>News and<br />Updates</h2></div><a class="ccs-text-link" href="/news-and-updates">View more <span>↗</span></a></div>
         <div class="ccs-news-grid">
@@ -63,19 +168,77 @@
         </div>
       </section>
 
-      <section class="ccs-who-we-are"><p class="ccs-overline">Share</p><h2>Who we are</h2><p>CCS describes its community as people brought together by a shared purpose, building connections and contributing to college life.</p></section>
+      <!-- About the CCS community -->
+      <section class="ccs-who-we-are">
+        <div class="who-copy">
+          <p class="section-label">SHARE</p>
+          <h2>WHO WE ARE</h2>
+          <p>Different people united by one goal: building bridges, taking part in college life, and moving forward together.</p>
+        </div>
+        <div class="video-frame" role="img" aria-label="CCS Warriors Video preview">
+          <div class="video-top">
+            <span class="video-avatar">b</span>
+            <span><b>CCS Warriors Video</b><small>boudemos</small></span>
+            <span class="video-controls">◖　CC　⚙</span>
+          </div>
+          <div class="video-poster">
+            <img src="/images/ccs/Warriors-Logo-2.png" alt="" />
+            <strong>COLLEGE OF COMPUTER STUDIES<br />TO INFINITY &amp; BEYOND</strong>
+            <span>#CCSTHEBEST</span>
+            <i>▶</i>
+          </div>
+          <div class="video-progress"><span></span></div>
+        </div>
+      </section>
 
-      <section class="ccs-facilities"><div class="ccs-section-title"><p class="ccs-overline">Build</p><h2>Our<br />Facilities</h2><a class="ccs-text-link" href="/about-us">View more <span>↗</span></a></div><div class="ccs-facility-images"><div class="ccs-facility-image facility-one"></div><div class="ccs-facility-image facility-two"></div><div class="ccs-facility-image facility-three"></div><div class="ccs-facility-image facility-four"></div></div></section>
+      <!-- Facilities gallery -->
+      <section class="ccs-facilities">
+        <p class="section-label">BUILD</p>
+        <h2>Our Facilities</h2>
+        <div class="facility-gallery">
+          <div class="facility-tile"><img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" /></div>
+          <div class="facility-tile"><img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" /></div>
+          <div class="facility-tile featured">
+            <img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" />
+            <div><b>Image 1</b><span>image description here</span></div>
+          </div>
+          <div class="facility-tile"><img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" /></div>
+        </div>
+        <a class="gold-button" href="/about-us">VIEW MORE</a>
+      </section>
 
-      <section class="ccs-partners"><div><p class="ccs-overline">Connect</p><h2>Our Partners<br />and Memberships</h2><p>Driving technology for education</p></div><div class="ccs-partner-logos"><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/Oracle_Academy_rgb.png" alt="Oracle Academy" /><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/1024px-Cisco_academy_logo.svg_-300x300.png" alt="Cisco Networking Academy" /><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/acer-300x300.jpg" alt="Acer" /><img src="https://ccs.cpu.edu.ph/wp-content/uploads/2021/11/huawei-academy-logo-300x300.jpg" alt="Huawei ICT Academy" /></div></section>
+      <!-- Partners and memberships -->
+      <section class="ccs-partners">
+        <p class="section-label">CONNECT</p>
+        <h2>Our Partners and Memberships</h2>
+        <p>Driving technology for education</p>
+        <div class="partner-logos">
+          <img src="/images/ccs/Oracle_Academy_rgb.png" alt="Oracle Academy" />
+          <img src="/images/ccs/1024px-Cisco_academy_logo.svg_-300x300.png" alt="Cisco Networking Academy" />
+          <img src="/images/ccs/acer-300x300.jpg" alt="Acer Academy" />
+          <img src="/images/ccs/huawei-academy-logo-300x300.jpg" alt="Huawei ICT Academy" />
+        </div>
+        <a class="gold-button" href="/linkages">VIEW MORE</a>
+      </section>
+
+      <!-- Contact information and map -->
+      <section class="ccs-contact" id="contact">
+        <div class="contact-copy">
+          <p class="section-label">CONTACT</p>
+          <h2>For any inquiries<br />please email</h2>
+          <a href="mailto:ccssec@cpu.edu.ph">ccssec@cpu.edu.ph</a>
+          <a class="gold-button" href="/contact-us">VIEW MORE OPTIONS</a>
+        </div>
+        <iframe
+          title="Map to Mary Thomas Hall, Central Philippine University"
+          src="https://www.google.com/maps?q=Mary+Thomas+Hall,+Central+Philippine+University,+Iloilo&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
     </main>
-
-    <footer class="ccs-footer" id="contact">
-      <div><p class="ccs-overline">Contact</p><h2>For any inquiries<br />please email</h2><a href="mailto:ccssec@cpu.edu.ph">ccssec@cpu.edu.ph</a></div>
-      <div class="ccs-footer-address"><a href="/contact-us">View more options <span>↗</span></a><p>Mary Thomas Hall<br />Central Philippine University<br />Lopez Jaena St., Jaro, Iloilo City</p></div>
-      <div class="ccs-footer-bottom"><span>College of Computer Studies · Central Philippine University</span><a href="#home">Back to top ↑</a></div>
-    </footer>
   </div>
 </template>
 
+<script src="../../scripts/home-header.js"></script>
 <style src="../../styles/home.css"></style>
