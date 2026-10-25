@@ -736,26 +736,24 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  color: #fff;
-  background:
-    radial-gradient(ellipse at 80% 120%, #ffad1f38, transparent 50%),
-    linear-gradient(135deg, var(--ccs-green), var(--ccs-deep));
+  color: var(--ccs-text);
+  background: #fff;
 }
 .facility-placeholder-mark {
   width: 56px;
   height: 56px;
   display: grid;
   place-items: center;
-  border: 1px solid #ffad1f99;
+  border: 1px solid #dfe6e2;
   border-radius: 5px;
-  color: var(--ccs-gold);
-  background: #ffffff0a;
+  color: var(--ccs-text);
+  background: #fff;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.08em;
 }
 .facility-placeholder-note {
-  color: #c6d0ce;
+  color: #87918e;
   font-size: 12px;
 }
 .facility-card-copy {
