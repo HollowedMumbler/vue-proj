@@ -233,14 +233,63 @@
       <section class="ccs-facilities">
         <p class="section-label">BUILD</p>
         <h2>Our Facilities</h2>
+        <p class="facility-intro">Explore the spaces in Mary Thomas Hall</p>
         <div class="facility-gallery">
-          <div class="facility-tile"><img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" /></div>
-          <div class="facility-tile"><img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" /></div>
-          <div class="facility-tile featured">
-            <img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" />
-            <div><b>Image 1</b><span>image description here</span></div>
-          </div>
-          <div class="facility-tile"><img src="/images/ccs/Warriors-Logo-2.png" alt="CCS Warriors" /></div>
+          <article class="facility-card">
+            <div class="facility-placeholder" role="img" aria-label="Photo placeholder for MT Canteen">
+              <span class="facility-placeholder-mark">MT</span>
+              <span class="facility-placeholder-note">Photo coming soon</span>
+            </div>
+            <div class="facility-card-copy">
+              <h3>MT Canteen</h3>
+              <p>Mary Thomas Hall</p>
+              <a class="facility-coordinates" href="https://www.google.com/maps/search/?api=1&amp;query=10.732702%2C122.548114" target="_blank" rel="noopener noreferrer">10.732702° N, 122.548114° E</a>
+            </div>
+          </article>
+          <article class="facility-card">
+            <div class="facility-placeholder" role="img" aria-label="Photo placeholder for MT Thesis Room">
+              <span class="facility-placeholder-mark">MT</span>
+              <span class="facility-placeholder-note">Photo coming soon</span>
+            </div>
+            <div class="facility-card-copy">
+              <h3>MT Thesis Room</h3>
+              <p>Mary Thomas Hall</p>
+              <a class="facility-coordinates" href="https://www.google.com/maps/search/?api=1&amp;query=10.732702%2C122.548114" target="_blank" rel="noopener noreferrer">10.732702° N, 122.548114° E</a>
+            </div>
+          </article>
+          <article class="facility-card">
+            <div class="facility-placeholder" role="img" aria-label="Photo placeholder for MT Lobby">
+              <span class="facility-placeholder-mark">MT</span>
+              <span class="facility-placeholder-note">Photo coming soon</span>
+            </div>
+            <div class="facility-card-copy">
+              <h3>MT Lobby</h3>
+              <p>Mary Thomas Hall</p>
+              <a class="facility-coordinates" href="https://www.google.com/maps/search/?api=1&amp;query=10.732702%2C122.548114" target="_blank" rel="noopener noreferrer">10.732702° N, 122.548114° E</a>
+            </div>
+          </article>
+          <article class="facility-card">
+            <div class="facility-placeholder" role="img" aria-label="Photo placeholder for MT Office">
+              <span class="facility-placeholder-mark">MT</span>
+              <span class="facility-placeholder-note">Photo coming soon</span>
+            </div>
+            <div class="facility-card-copy">
+              <h3>MT Office</h3>
+              <p>Mary Thomas Hall</p>
+              <a class="facility-coordinates" href="https://www.google.com/maps/search/?api=1&amp;query=10.732702%2C122.548114" target="_blank" rel="noopener noreferrer">10.732702° N, 122.548114° E</a>
+            </div>
+          </article>
+          <article class="facility-card">
+            <div class="facility-placeholder" role="img" aria-label="Photo placeholder for MT AVR Rooms">
+              <span class="facility-placeholder-mark">MT</span>
+              <span class="facility-placeholder-note">Photo coming soon</span>
+            </div>
+            <div class="facility-card-copy">
+              <h3>MT AVR Rooms</h3>
+              <p>Mary Thomas Hall</p>
+              <a class="facility-coordinates" href="https://www.google.com/maps/search/?api=1&amp;query=10.732702%2C122.548114" target="_blank" rel="noopener noreferrer">10.732702° N, 122.548114° E</a>
+            </div>
+          </article>
         </div>
         <a class="gold-button" href="/about-us">VIEW MORE</a>
       </section>
