@@ -549,7 +549,9 @@
   color: #333;
   background: #fff;
   box-shadow: 0 8px 22px #061a1a24;
-  transition: transform .22s ease, box-shadow .22s ease;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
 }
 .news-card:hover,
 .news-card:focus {
@@ -570,7 +572,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .35s ease;
+  transition: transform 0.35s ease;
 }
 .news-card:hover .news-card-media img,
 .news-card:focus .news-card-media img {
@@ -588,7 +590,10 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
-  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    visibility 0.22s ease;
 }
 .news-card:hover .news-card-hover,
 .news-card:focus .news-card-hover {
