@@ -1,0 +1,422 @@
+[
+  {
+    "section": "Home",
+    "route": "/",
+    "folder": "01-Home",
+    "file": "01-Home/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 9452,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Home",
+    "route": "/",
+    "folder": "01-Home",
+    "file": "01-Home/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 8272,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Home",
+    "route": "/",
+    "folder": "01-Home",
+    "file": "01-Home/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 6670,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - History",
+    "route": "/history",
+    "folder": "02-About-History",
+    "file": "02-About-History/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 4264,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - History",
+    "route": "/history",
+    "folder": "02-About-History",
+    "file": "02-About-History/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 3707,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - History",
+    "route": "/history",
+    "folder": "02-About-History",
+    "file": "02-About-History/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 3266,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Vision and Mission",
+    "route": "/vision-and-mission",
+    "folder": "03-About-Vision-and-Mission",
+    "file": "03-About-Vision-and-Mission/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 1865,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Vision and Mission",
+    "route": "/vision-and-mission",
+    "folder": "03-About-Vision-and-Mission",
+    "file": "03-About-Vision-and-Mission/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 1204,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Vision and Mission",
+    "route": "/vision-and-mission",
+    "folder": "03-About-Vision-and-Mission",
+    "file": "03-About-Vision-and-Mission/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 1056,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Dean Message",
+    "route": "/dean-message",
+    "folder": "04-About-Dean-Message",
+    "file": "04-About-Dean-Message/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 2338,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Dean Message",
+    "route": "/dean-message",
+    "folder": "04-About-Dean-Message",
+    "file": "04-About-Dean-Message/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 1455,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Dean Message",
+    "route": "/dean-message",
+    "folder": "04-About-Dean-Message",
+    "file": "04-About-Dean-Message/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 1239,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Linkages",
+    "route": "/linkages",
+    "folder": "05-About-Linkages",
+    "file": "05-About-Linkages/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 1696,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Linkages",
+    "route": "/linkages",
+    "folder": "05-About-Linkages",
+    "file": "05-About-Linkages/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 1272,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - Linkages",
+    "route": "/linkages",
+    "folder": "05-About-Linkages",
+    "file": "05-About-Linkages/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 1326,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - News and Updates",
+    "route": "/news-and-updates",
+    "folder": "06-About-News-and-Updates",
+    "file": "06-About-News-and-Updates/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 2217,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - News and Updates",
+    "route": "/news-and-updates",
+    "folder": "06-About-News-and-Updates",
+    "file": "06-About-News-and-Updates/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 1549,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "About - News and Updates",
+    "route": "/news-and-updates",
+    "folder": "06-About-News-and-Updates",
+    "file": "06-About-News-and-Updates/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 1129,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSCS",
+    "route": "/computer-science",
+    "folder": "07-Academic-Programs-BSCS",
+    "file": "07-Academic-Programs-BSCS/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 11099,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSCS",
+    "route": "/computer-science",
+    "folder": "07-Academic-Programs-BSCS",
+    "file": "07-Academic-Programs-BSCS/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 9309,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSCS",
+    "route": "/computer-science",
+    "folder": "07-Academic-Programs-BSCS",
+    "file": "07-Academic-Programs-BSCS/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 8247,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSIT",
+    "route": "/information-technology",
+    "folder": "08-Academic-Programs-BSIT",
+    "file": "08-Academic-Programs-BSIT/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 11600,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSIT",
+    "route": "/information-technology",
+    "folder": "08-Academic-Programs-BSIT",
+    "file": "08-Academic-Programs-BSIT/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 9607,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSIT",
+    "route": "/information-technology",
+    "folder": "08-Academic-Programs-BSIT",
+    "file": "08-Academic-Programs-BSIT/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 8602,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSIS extra",
+    "route": "/information-systems",
+    "folder": "09-Academic-Programs-BSIS-extra",
+    "file": "09-Academic-Programs-BSIS-extra/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 11869,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSIS extra",
+    "route": "/information-systems",
+    "folder": "09-Academic-Programs-BSIS-extra",
+    "file": "09-Academic-Programs-BSIS-extra/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 9625,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSIS extra",
+    "route": "/information-systems",
+    "folder": "09-Academic-Programs-BSIS-extra",
+    "file": "09-Academic-Programs-BSIS-extra/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 8341,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSDMIA",
+    "route": "/digital-media-and-interactive-arts",
+    "folder": "10-Academic-Programs-BSDMIA",
+    "file": "10-Academic-Programs-BSDMIA/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 9735,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSDMIA",
+    "route": "/digital-media-and-interactive-arts",
+    "folder": "10-Academic-Programs-BSDMIA",
+    "file": "10-Academic-Programs-BSDMIA/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 8435,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BSDMIA",
+    "route": "/digital-media-and-interactive-arts",
+    "folder": "10-Academic-Programs-BSDMIA",
+    "file": "10-Academic-Programs-BSDMIA/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 7778,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BLIS",
+    "route": "/library-information-science",
+    "folder": "11-Academic-Programs-BLIS",
+    "file": "11-Academic-Programs-BLIS/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 9217,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BLIS",
+    "route": "/library-information-science",
+    "folder": "11-Academic-Programs-BLIS",
+    "file": "11-Academic-Programs-BLIS/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 8139,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Academic Programs - BLIS",
+    "route": "/library-information-science",
+    "folder": "11-Academic-Programs-BLIS",
+    "file": "11-Academic-Programs-BLIS/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 7509,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Faculty and Staff",
+    "route": "/faculty-and-staff",
+    "folder": "12-Faculty-and-Staff",
+    "file": "12-Faculty-and-Staff/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 7472,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Faculty and Staff",
+    "route": "/faculty-and-staff",
+    "folder": "12-Faculty-and-Staff",
+    "file": "12-Faculty-and-Staff/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 8853,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Faculty and Staff",
+    "route": "/faculty-and-staff",
+    "folder": "12-Faculty-and-Staff",
+    "file": "12-Faculty-and-Staff/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 7204,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Event Calendar",
+    "route": "/event-calendar",
+    "folder": "13-Event-Calendar",
+    "file": "13-Event-Calendar/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 1550,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Event Calendar",
+    "route": "/event-calendar",
+    "folder": "13-Event-Calendar",
+    "file": "13-Event-Calendar/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 1485,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Event Calendar",
+    "route": "/event-calendar",
+    "folder": "13-Event-Calendar",
+    "file": "13-Event-Calendar/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 1960,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Contact Us",
+    "route": "/contact-us",
+    "folder": "14-Contact-Us",
+    "file": "14-Contact-Us/Mobile-375px.png",
+    "viewport": "375x812",
+    "documentHeight": 1919,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Contact Us",
+    "route": "/contact-us",
+    "folder": "14-Contact-Us",
+    "file": "14-Contact-Us/Tablet-768px.png",
+    "viewport": "768x1024",
+    "documentHeight": 1691,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  },
+  {
+    "section": "Contact Us",
+    "route": "/contact-us",
+    "folder": "14-Contact-Us",
+    "file": "14-Contact-Us/Desktop-1440px.png",
+    "viewport": "1440x1000",
+    "documentHeight": 1751,
+    "title": "College of Computer Studies | Central Philippine University",
+    "brokenImages": []
+  }
+]
